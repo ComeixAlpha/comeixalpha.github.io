@@ -14,7 +14,7 @@
         <link rel="prev" href="../structure/">
       
       
-        <link rel="next" href="../../../ref/mapcolors/">
+        <link rel="next" href="../carpet_only/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -713,6 +713,174 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../carpet_only/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    仅地毯
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rm_glasses/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    去除玻璃
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rm_sands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    去除沙子与混凝土粉末
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flattening/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    版本-扁平化
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic_offset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基础偏移
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../staircase_gap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    阶梯式竖向间隔
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fscoe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Floyd-Steinberg 系数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wsdelay/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebSocket 通信间隔
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -888,7 +1056,37 @@
 <h2 id="_2">参数细节<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>类型：<code>bool</code></p>
 <h2 id="_3">详解<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p><img alt="Original Image" src="https://dummyimage.com/600x400/eee/aaa" /></p>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>对于体积较小的画，使用抖动的效果反而可能会不如不抖动的效果，体积越大的画使用抖动的效果就会越好</p>
+</div>
+<p>颜色抖动，也称仿色，是尝试用较低的颜色位深度来获得更为丰富的视觉效果。比如下面这个例子</p>
+<figure>
+  <img alt="Image title" src="../../../assets/fsoriginal.png" width="300" />
+  <figcaption>原始图像</figcaption>
+<img alt="Image title" src="../../../assets/fsnodither.png" width="300" />
+  <figcaption>无抖动</figcaption>
+<img alt="Image title" src="../../../assets/fsdithered.png" width="300" />
+  <figcaption>使用 Floyd-Steinberg</figcaption>
+</figure>
+<p>这个例子来自 <a href="https://en.wikipedia.org/wiki/Floyd%E2%80%93Steinberg_dithering">Wikipedia: Floyd-Steinberg Dithering</a>。</p>
+<p>对颜色抖动的效果和原理做描述的文章已经足够多，这里就不展开讲了。</p>
+<p>Colorify 使用了最为经典的 Floyd-Steinberg 抖动算法，大致实现如下：</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">find_closest_palette_color</span><span class="p">(</span><span class="nx">v</span><span class="o">:</span><span class="w"> </span><span class="kt">RGB</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">RGB</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+
+<span class="nx">image</span><span class="p">.</span><span class="nx">enumerate</span><span class="p">((</span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">pixel</span><span class="o">:</span><span class="w"> </span><span class="kt">RGB</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">found</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">find_closest_palette_color</span><span class="p">(</span><span class="nx">pixel</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">quant_error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RGB</span><span class="p">(</span>
+<span class="w">        </span><span class="nx">r</span><span class="o">:</span><span class="w"> </span><span class="kt">pixel.r</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">found</span><span class="p">.</span><span class="nx">r</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">g</span><span class="o">:</span><span class="w"> </span><span class="kt">pixel.g</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">found</span><span class="p">.</span><span class="nx">g</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="kt">pixel.b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">found</span><span class="p">.</span><span class="nx">b</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="nx">image</span><span class="p">.</span><span class="nx">setPixel</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">getPixel</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">quant_error</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">7</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">16</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">image</span><span class="p">.</span><span class="nx">setPixel</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">getPixel</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">quant_error</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">16</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">image</span><span class="p">.</span><span class="nx">setPixel</span><span class="p">(</span><span class="nx">x</span><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">getPixel</span><span class="p">(</span><span class="nx">x</span><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">quant_error</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">16</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">image</span><span class="p">.</span><span class="nx">setPixel</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">getPixel</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">quant_error</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">16</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
 
 
 
