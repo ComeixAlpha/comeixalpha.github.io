@@ -1,3 +1,81 @@
-site_name: Colorify Doc
+site_name: Colorify Docs
+repo_url: https://github.com/ComeixAlpha/comeixalpha.github.io
+repo_name: ComeixAlpha/comeixalpha.github.io
+site_author: Comeix Alpha
+
 theme:
   name: material
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: 切换至浅色模式
+
+markdown_extensions:
+
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - 主页: index.md
+  - 参数表:
+    - 粒子画:
+      - 裁剪: arguments_table/common/clips.md
+      - 裁剪插值法: arguments_table/common/interpolation.md
+      - 高度: arguments_table/particles/height.md
+      - 平面: arguments_table/particles/plane.md
+      - 模式: arguments_table/particles/mode.md
+      - 旋转: arguments_table/particles/rotate.md
+    - 像素画:
+      - 裁剪: arguments_table/common/clips.md
+      - 裁剪插值法: arguments_table/common/interpolation.md
+      - 平面: arguments_table/blocks/plane.md
+      - 色差公式: arguments_table/blocks/distance.md
+      - 阶梯式: arguments_table/blocks/staircase.md
+      - 使用结构: arguments_table/blocks/structure.md
+      - 颜色抖动: arguments_table/blocks/dither.md
+      - 仅地毯: arguments_table/blocks/carpet_only.md
+      - 去除玻璃: arguments_table/blocks/rm_glasses.md
+      - 去除沙子与混凝土粉末: arguments_table/blocks/rm_sands.md
+      - 版本-扁平化: arguments_table/blocks/flattening.md
+      - 基础偏移: arguments_table/blocks/basic_offset.md
+      - 阶梯式竖向间隔: arguments_table/blocks/staircase_gap.md
+      - Floyd-Steinberg 系数: arguments_table/blocks/fscoe.md
+      - WebSocket 通信间隔: arguments_table/blocks/wsdelay.md
+  - 参考:
+    - 基岩版地图基色表: ref/mapcolors.md
+  - 特别鸣谢: acknowledgement.md
