@@ -6,10 +6,26 @@ site_author: Comeix Alpha
 theme:
   name: material
   palette:
-    - media: "(prefers-color-scheme)"
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: red
       toggle:
-        icon: material/link
-        name: 切换至浅色模式
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+# Customization
+extra_css:
+  - 'assets/css/extra.css?v=14'
 
 markdown_extensions:
 
