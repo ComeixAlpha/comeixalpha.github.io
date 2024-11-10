@@ -94,4 +94,5 @@ nav:
       - WebSocket 通信间隔: arguments_table/blocks/wsdelay.md
   - 参考:
     - 基岩版地图基色表: ref/mapcolors.md
+    - SAPI-Minecraft 版本映射表: ref/sapi_versions.md
   - 特别鸣谢: acknowledgement.md
