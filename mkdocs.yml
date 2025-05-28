@@ -95,4 +95,9 @@ nav:
   - 参考:
     - 基岩版地图基色表: ref/mapcolors.md
     - SAPI-Minecraft 版本映射表: ref/sapi_versions.md
+  - 使用示例与教程:
+    - 粒子画使用教程: tutorials/particle.md
+    - 粒子画-映射表: tutorials/mappings.md
+    - 像素画使用教程: tutorials/block.md
+  - 常见问题: common_issues.md
   - 特别鸣谢: acknowledgement.md
