@@ -34,9 +34,10 @@ jobs:
           cache: pnpm
 
       - name: Setup Pages
+        # 不使用 static_site_generator: next：其会把 next.config.mjs 改写并注入配置，
+        # 对 Fumadocs 的 withMDX(config) 写法解析失败导致报错。
+        # next.config.mjs 已自行配置 output: 'export'。
         uses: actions/configure-pages@v5
-        with:
-          static_site_generator: next
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
