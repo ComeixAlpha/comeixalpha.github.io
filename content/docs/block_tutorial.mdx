@@ -1,0 +1,151 @@
+---
+title: 像素画教程 Pixel Art Tutorial
+description: 从零开始教你如何使用 Colorify 生成像素画
+---
+
+像素画相信大家都很熟悉也很了解了，即用 Minecraft 原版方块去模拟图片的效果，那么直入主题。
+
+## 来到像素画生成页面
+
+点击像素画页面按钮<span className="text-gray-400">（网格模样图标，导航栏第二个）</span>时，您便会处在像素画参数页面。
+
+![](../assets/tutorials/pixel/come_to_pixel_page.png)
+
+## 设置参数
+
+在上图中可以很直观地看到，像素画页面被分为两大区域，左侧是**参数设置区域**，右侧是**像素画调色板**
+
+如果您对怎样设置各种参数没有头绪，请在左侧文档目录查看 **参数表**
+
+<Callout type="tip" title="提示">
+  如果您实在是拿不准怎么填写各个参数，我的建议是：什么也不要填
+</Callout>
+
+## 调色板
+
+在调色板页面，您可以调整哪些方块可以出现在您的像素画中，哪些方块不可以出现在您的像素画中。
+
+启用的方块样式如下
+![](../assets/tutorials/pixel/tile_enabled.png)
+
+通过单击启用的方块条目，您可以将其禁用，禁用的方块样式如下
+![](../assets/tutorials/pixel/tile_disabled.png)
+
+当然，再次点击禁用的方块条目，您可以将其启用。
+
+Colorify 唯一默认禁用的方块是 `minecraft:tnt`，因为它容易炸。
+
+## 生成像素画
+
+当你完成了参数表与调色板的设置后，就可以开始生成像素画了。
+
+在像素画页面右下角有一个三角图案按钮，点击就会展开三种生成方式的选择按钮
+
+<figure className="flex flex-col items-center [&_img]:mx-auto [&_p]:my-0">
+  ![](../assets/tutorials/pixel/pixel_page_fab.png)
+</figure>
+
+### 方法一：生成文件
+
+#### 生成 .mcfunction 文件
+
+默认情况下，Colorify 将生成一堆 .mcfunction 文件。
+
+<Callout type="info" title="什么是 .mcfunction 文件？">
+  即函数文件，是 Minecraft
+  基岩版中一种可以执行一系列命令的文件。如果您不知道如何使用这类文件，我推荐您看[这个视频](https://www.bilibili.com/video/BV12t411R7Ct/)
+</Callout>
+
+#### 生成 .mcstructure 文件
+
+<Callout type="info" title="什么是 .mcstructure 文件？">
+  即结构文件，是 Minecraft 基岩版中一种可以执行一系列命令的文件。如果您不知道如何使用这类文件，我推荐您先看上面的如何使用 .mcfunction 文件的教程，然后对应地把 .mcstructure 文件放到 structures 文件夹下，并在游戏中使用 `/structure` 命令或是结构方块来加载它。
+
+当然，您也可以查看 [Minecraft Wiki - Structure Block](https://minecraft.wiki/w/Structure_Block) / [Bedrock Wiki - .mcstructure](https://wiki.bedrock.dev/nbt/mcstructure)
+
+</Callout>
+
+当您启用了[使用结构]()时，Colorify 将生成一个 .mcstructure 文件。
+
+### 方法二：通过 WebSocket 传输
+
+上图可以注意到，“通过 WebSocket 发送”按钮是灰的，这表示 WebSocket 服务器还未启动或是没有任何实例连接。在正确启动 WebSocket 服务器并在游戏内连接后，Colorify 便可以通过 WebSocket 发送像素画数据到游戏中。
+
+<Callout type="info" title="关于 WebSocket 传输">
+  WebSocket 传输执行命令的速度较慢，且在最近的版本中，WebSocket
+  不再能强制加载较远的区域，所以更推荐使用直接写入 LevelDB 来生成像素画
+</Callout>
+
+### 方法三：写入世界 - 直接写入 LevelDB
+
+<Callout type="warning" title="检查您的 Colorify 版本">
+  该方式从 **Colorify v.7.0.1** 开始支持，若您使用的 Colorify 版本低于
+  v.7.0.1，请升级到最新版本
+</Callout>
+
+直接写入 LevelDB 是一种更高效的方式来生成像素画。通过这种方式，您可以直接将像素画数据写入到 Minecraft 的世界中，而**不需要打开游戏**或是通过命令或结构文件来实现。
+
+上图可以注意到，“写入世界”按钮是灰的，这表示您还没有打开“直接写入 LevelDB”按钮或是没有指定有效的世界目录。
+
+请按照以下步骤来使用直接写入 LevelDB 来生成像素画
+
+<Steps>
+
+<Step>
+  <span className="text-red-400">如果您不确定您的操作是否正确，请先备份您的世界，以免意外发生，损毁您的存档或是部分建筑。如果出现了任何问题，我们不对您造成的损失负责</span>
+</Step>
+
+<Step>
+  记住您要生成像素画的起始位置（西北角），即像素画将从这个位置开始生成，向东（X+）向南（Z+）扩展
+</Step>
+
+<Step>
+打开 “直接写入 LevelDB” 按钮
+
+![](../assets/tutorials/pixel/open_ldb_rw.png)
+
+</Step>
+
+<Step>
+  此步骤为安卓用户专属。
+
+将您的世界目录复制到 storage/emulated/0/Download/colorify/ 下，Colorify 将会自动识别您的世界目录
+
+<Callout type="warning" title="只能是 Download/colorify 下">
+    虽然其余外部存储目录理论上也可以被读取，但是我们约定 Colorify 只读取 Download/colorify 下的世界目录，所以请务必将您的世界目录放在 Download/colorify 下
+</Callout>
+</Step>
+
+<Step>
+  在 “世界路径” 参数（“直接写入 LevelDB”参数的下一个参数）一栏点击 “浏览” 按钮，选择您的世界
+
+![](../assets/tutorials/pixel/browse_world.png)
+
+</Step>
+
+<Step>
+  在 “生成坐标” 参数（“世界路径”参数的下一个参数）一栏填入刚刚记住的起始位置坐标
+
+![](../assets/tutorials/pixel/spawn_loc.png)
+
+</Step>
+
+<Step>
+    点击 “写入世界” 按钮，Colorify 将会直接将像素画数据写入到您选择的世界中
+
+    如果您的画体积较大，Colorify 可能需要一些时间来完成写入，请耐心等待
+
+</Step>
+
+<Step>
+    此步骤为安卓用户专属。
+
+    写入完成后，在 storage/emulated/0/Download/colorify/ 下的对应世界就已经被修改，您可以将其打包为 .mcworld 文件，然后使用 Minecraft 打开它。如果您有操作权限，也可以直接将其移动到 Minecraft 的 worlds 文件夹下，然后在游戏中打开它
+
+</Step>
+
+<Step>
+  打开 Minecraft，进入您刚刚写入的世界，您就可以看到您的像素画已经生成了
+</Step>
+
+</Steps>

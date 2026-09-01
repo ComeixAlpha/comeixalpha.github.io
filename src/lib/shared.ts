@@ -1,11 +1,11 @@
-export const appName = 'My App';
+export const appName = 'Colorify Docs';
 export const docsRoute = '/docs';
 export const docsImageRoute = '/og/docs';
 export const docsContentRoute = '/llms.mdx/docs';
 
-// fill this with your actual GitHub info, for example:
+// 部署目标仓库（源码将放在该仓库 main 分支）
 export const gitConfig = {
-  user: 'fuma-nama',
-  repo: 'fumadocs',
+  user: 'ComeixAlpha',
+  repo: 'comeixalpha.github.io',
   branch: 'main',
 };

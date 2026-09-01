@@ -1,0 +1,8 @@
+{
+  "title": "像素画专属参数 Pixel Params",
+  "pages": [
+    "color_distance",
+    "staircase",
+    "dithering"
+  ]
+}

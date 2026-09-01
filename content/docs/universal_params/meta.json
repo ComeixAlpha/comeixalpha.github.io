@@ -1,0 +1,8 @@
+{
+  "title": "通用参数 Universal Params",
+  "pages": [
+    "resize",
+    "resize_interpolation",
+    "plane"
+  ]
+}

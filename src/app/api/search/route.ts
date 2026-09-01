@@ -1,4 +1,7 @@
 import { source } from '@/lib/source';
 import { createFromSource } from 'fumadocs-core/search/server';
 
-export const { GET } = createFromSource(source);
+// 静态导出模式下需要在构建时预渲染搜索索引
+export const revalidate = false;
+
+export const { staticGET: GET } = createFromSource(source);
