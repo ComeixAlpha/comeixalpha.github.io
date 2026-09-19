@@ -1,0 +1,28 @@
+---
+title: 箭塔 Archer
+description: 一级箭塔
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/archer_tower_icon_1.png";
+
+箭塔（Archer）是一座一级箭塔，五大基础塔之一，可在空基座直接建造。
+
+<GameInfoBox
+  title="箭塔"
+  subtitle="Archer"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "90" },
+    { label: "血量", value: "80" },
+    { label: "攻击力", value: "6" },
+    { label: "攻击冷却", value: "20 Ticks" },
+  ]}
+>
+
+## 行为
+
+发射箭矢攻击 1 个敌人
+
+</GameInfoBox>

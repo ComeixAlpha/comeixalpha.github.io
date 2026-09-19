@@ -1,0 +1,91 @@
+---
+title: 地狱之塔 Gehenna
+description: 四级法术塔
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/magic_tower_icon_4_2.png";
+import sacrifice_to_moloch from "../../assets/wiki/tower_skills/sacrifice_to_moloch.png";
+import furnace_of_iquity from "../../assets/wiki/tower_skills/furnace_of_iniquity.png";
+
+> 如果你一只手使你犯罪，就砍掉它！拖着残废的身体进入永生，胜过双手健全却落入地狱不灭的火中。倘若你一只脚使你犯罪，就砍掉它！瘸着腿进入永生， 46 胜过双脚健全却被丢进地狱！如果你的一只眼睛使你犯罪，就剜掉它！独眼进上帝的国，胜过双目健全却被丢进地狱。在那里，“虫是不死的，火是不灭的。” -- 《马可福音》9:43-48
+>
+> 当时，耶和华把硫磺与火，从天上耶和华那里降与所多玛和蛾摩拉，把那些城和全平原，城里所有的居民和土地上生长的，都毁灭了。罗得的妻子在他后边回头一看，就变成了一根盐柱。亚伯拉罕清早起来，到了他先前站在耶和华面前的地方，面向所多玛和蛾摩拉，以及平原全地观望。他观看，看哪，那地有浓烟上腾，好像烧窑的浓烟。-- 《创世记》19:24-28
+
+地狱之塔（Gehenna）是一座四级法术塔，可由天灾术士升级而来。
+
+<GameInfoBox
+  title="地狱之塔"
+  subtitle="Gehenna"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "300" },
+    { label: "血量", value: "150" },
+    { label: "攻击力", value: "0 ~ 200" },
+    { label: "攻击速度", value: "20 次每秒" },
+  ]}
+  lore="硫磺与火"
+>
+
+## 行为
+
+在攻击范围内锁定单个敌人直至其死亡或是离开范围，使其附着硫磺火，不间断地燃烧，每 Tick 造成（魔法类-火焰）伤害，伤害随时间增加。
+
+帧（刻）伤害计算公式如下
+
+$$
+\Large DPF=\min(e^{\alpha t},200)
+$$
+
+其中
+
+- $t$ 为时间，单位 Ticks。
+- $\alpha$ 为常数，值为 $0.016075$
+- $200$ 即最大帧伤，在 $\alpha=0.016075$ 的情况下约需要 329.6 Ticks 达到此最值
+
+$\alpha$ 的值由下式解得
+
+$$
+\Large \sum^{200}_{i=0}e^{i\alpha}=1500
+$$
+
+意思就是，在这样的情况下，地狱塔锁定单个敌人长达 **10s** 后对其造成的伤害约为 **1500**。
+
+特别地，当地狱之塔攻击的目标是BOSS时，固定造成每秒 **50** 点（魔法类-火焰）伤害
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="摩洛克的献祭"
+  subtitle="Sacrifice to Moloch"
+  image={sacrifice_to_moloch.src}
+  attributes={[
+    { label: "升级花费", value: "80" },
+    { label: "可用等级", value: "0 / 1" },
+  ]}
+>
+
+## 主动技能 摩洛克的献祭 Sacrifice to Moloch
+
+> 他们在欣嫩子谷建筑巴力的邱坛，好使自己的儿女经火归摩洛 -- 《耶利米书》32:35
+
+手动释放。使正在攻击的非 BOSS 类敌人死亡，该即死效果无法被任何机制格挡或取消。如果作用的对象是 BOSS，那么效果变为：立即对其造成 200 点（魔法类-火焰）伤害，同时施加无限时长、不可叠加的硫磺火减益，每秒造成 20 点（魔法类-火焰）伤害。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="罪业焚炉"
+  subtitle="Furnace of Iniquity"
+  image={furnace_of_iquity.src}
+  attributes={[
+    { label: "升级花费", value: "80" },
+    { label: "可用等级", value: "0 / 1" },
+  ]}
+>
+
+## 被动技能 罪业焚炉 Furnace of Iniquity
+
+持续生效。伤害提升的速度增加（$\alpha$ 的值提升至 $0.016923$，在此数值下，10s 造成的伤害约 1700）。如果主动技能已经解锁，每杀死一个敌人使得主动技能的冷却减少 **2s**。
+
+</GameInfoBox>

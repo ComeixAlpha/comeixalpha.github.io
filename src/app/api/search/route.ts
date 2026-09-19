@@ -1,7 +1,17 @@
-import { source } from '@/lib/source';
+import { source, wikiSource } from '@/lib/source';
 import { createFromSource } from 'fumadocs-core/search/server';
 
-// 静态导出模式下需要在构建时预渲染搜索索引
 export const revalidate = false;
 
-export const { staticGET: GET } = createFromSource(source);
+const mergedSource = {
+  ...source,
+  getPages: () => [...source.getPages(), ...wikiSource.getPages()],
+  getPageTree: (locale?: string) => {
+    const docsTree = source.getPageTree(locale);
+    const wikiTree = wikiSource.getPageTree(locale);
+
+    return { ...docsTree, children: [...docsTree.children, ...wikiTree.children] };
+  },
+};
+
+export const { staticGET: GET } = createFromSource(mergedSource);

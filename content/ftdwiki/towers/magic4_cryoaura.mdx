@@ -1,0 +1,73 @@
+---
+title: 冰霜精灵 Cryoaura
+description: 四级法术塔
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/magic_tower_icon_4_1.png";
+import cryo_zone from "../../assets/wiki/tower_skills/cryo_zone.png";
+import winter_pervasion from "../../assets/wiki/tower_skills/winters_pervasion.png";
+
+冰霜精灵（Cryoaura）是一座四级法术塔，可由元素魔法使升级而来。
+
+<GameInfoBox
+  title="冰霜精灵"
+  subtitle="Cryoaura"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "300" },
+    { label: "血量", value: "150" },
+    { label: "攻击力", value: "20" },
+    { label: "攻击速度", value: "4 次每两秒" },
+  ]}
+  lore=""
+>
+
+## 行为
+
+锁定单个敌怪，每次攻击连续发射四发冰霜子弹，每发子弹造成 **20** 点（魔法类-冰霜）伤害。子弹造成覆盖性的 **50%** 的减速效果，持续 **3s**。
+
+覆盖性减速表现如下，假设目标怪物原来就具有 $A$ 秒，程度为 $B$ 的减速效果
+
+- 如果 $A > 3$ 且 $B >= 50\%$，那么本次减速无效
+- 如果 $A > 3$ 但 $B < 50\%$，那么效果变为 $A$ 秒的 $50\%$ 减速
+- 如果 $A < 3$ 但 $B >= 50\%$，那么效果变为 $3+A$ 秒的 $B$ 减速
+- 如果 $A < 3$ 且 $B <= 50\%$，那么效果变为 $3+A$ 秒的 $50\%$ 减速
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="极寒禁区"
+  subtitle="Cryo Zone"
+  image={cryo_zone.src}
+  attributes={[
+    { label: "升级花费", value: "80" },
+    { label: "可用等级", value: "0 / 1 / 2" },
+    { label: "冷却时间", value: "40 秒" },
+  ]}
+  lore=""
+>
+
+## 主动技能 极寒禁区 Cryo Zone
+
+手动释放。效果与冰霜魔法 I/II 一致。在攻击范围内的怪物路径上选中一处地点，冰冻范围 R=6 的所有敌人，冰冻持续 **8s**，在冰冻生效时间内后续走进范围的怪物每秒受到时长为 **1s** 的减速。等级2时冰冻范围和时长均提升 **2**。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="凛冬弥漫"
+  subtitle="Winter's Pervasion"
+  image={winter_pervasion.src}
+  attributes={[
+    { label: "升级花费", value: "80" },
+    { label: "可用等级", value: "0 / 1" },
+  ]}
+  lore=""
+>
+
+## 被动技能 凛冬弥漫 Winter's Pervasion
+
+持续生效。冰霜精灵每秒以自身为中心对范围 R=16 的敌人施加 **1.5s** 的 **20%** 减速效果。
+
+</GameInfoBox>

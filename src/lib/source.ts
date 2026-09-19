@@ -1,8 +1,8 @@
 import { loader } from 'fumadocs-core/source';
 import { lucideIconsPlugin } from 'fumadocs-core/source/lucide-icons';
-import { docsContentRoute, docsImageRoute, docsRoute } from './shared';
-import { defineDocs } from 'fumadocs-mdx/macro';
 import { metaSchema, pageSchema } from 'fumadocs-core/source/schema';
+import { defineDocs } from 'fumadocs-mdx/macro';
+import { docsContentRoute, docsImageRoute, docsRoute, wikiRoute } from './shared';
 
 const docs = defineDocs({
   dir: 'content/docs',
@@ -17,10 +17,27 @@ const docs = defineDocs({
   },
 });
 
+// 独立的 wiki 集合：内容在 content/ftdwiki，路由前缀 /ftdwiki
+const wiki = defineDocs({
+  dir: 'content/ftdwiki',
+  docs: {
+    schema: pageSchema,
+  },
+  meta: {
+    schema: metaSchema,
+  },
+});
+
 // See https://fumadocs.dev/docs/headless/source-api for more info
 export const source = loader({
   baseUrl: docsRoute,
   source: docs.toFumadocsSource(),
+  plugins: [lucideIconsPlugin()],
+});
+
+export const wikiSource = loader({
+  baseUrl: wikiRoute,
+  source: wiki.toFumadocsSource(),
   plugins: [lucideIconsPlugin()],
 });
 

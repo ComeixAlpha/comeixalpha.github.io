@@ -1,6 +1,6 @@
-@import 'tailwindcss';
-@import 'fumadocs-ui/css/neutral.css';
-@import 'fumadocs-ui/css/preset.css';
+@import "tailwindcss";
+@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/preset.css";
 
 html {
   scrollbar-gutter: stable;
@@ -9,4 +9,9 @@ html {
 html > body[data-scroll-locked] {
   margin-right: 0px !important;
   --removed-body-scroll-bar-size: 0px !important;
+}
+
+/* Markdown 引用块（经文 / 引文）统一用灰色，降低视觉权重 */
+.prose {
+  --tw-prose-quotes: var(--color-fd-muted-foreground);
 }

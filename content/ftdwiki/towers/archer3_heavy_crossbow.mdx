@@ -1,0 +1,32 @@
+---
+title: 劲弩塔 Heavy Crossbow
+description: 三级箭塔
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/archer_tower_icon_3_2.png";
+
+劲弩塔（Heavy Crossbow）是一座三级箭塔，可由[前哨箭塔](./archer2.mdx)升级而来。
+
+特殊改良后的箭塔，配备有强力弩弓，适于远程精确打击。
+
+<GameInfoBox
+  title="劲弩塔"
+  subtitle="Heavy Crossbow"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "250" },
+    { label: "血量", value: "120" },
+    { label: "攻击力", value: "32" },
+    { label: "攻击冷却", value: "30 Ticks" },
+  ]}
+>
+
+## 行为
+
+发射箭矢攻击 1 个敌人。
+
+每次攻击有 25% 的概率穿透目标的护甲，并有 15% 的概率暴击。
+
+</GameInfoBox>

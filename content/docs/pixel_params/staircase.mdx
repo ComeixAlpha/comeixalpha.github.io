@@ -17,16 +17,16 @@ description: 一种特殊的像素画生成方式
 
 - 地图的尺寸与分辨率
 
-地图的尺寸均为 $128\times 128$，默认缩放等级（Zoom Level）是 $0$。可以显示的区域大小是
+地图的尺寸均为 $128\times 128$，默认缩放等级（Zoom Level）是 $0$。我们记缩放等级为 $Z$，那么可以显示的区域大小可以表示为：
 
 $$
-AreaSize=128\times 2^ZoomLevel\times128\times 2^ZoomLevel
+AreaSize=128\times 2^Z\times128\times 2^Z
 $$
 
 其中每个像素点可以代表的方块数量是
 
 $$
-1\space Map Pixel Represents=2^ZoomLevel
+1\space Map Pixel Represents=2^Z
 $$
 
 但显示的区域大小和分辨率并无关系，分辨率一直都是 $128\times 128$，所以提高缩放等级并不能让画面更精细。
@@ -263,7 +263,12 @@ SlopeCraft 使用的算法与 Colorify 不同，但其也达到了压缩 H 到�
 
 ## 搭桥
 
-由于基岩版还没有真正意义上的投影Mod，所以暂时不会加入搭桥功能。
+~~由于基岩版还没有真正意义上的投影Mod，所以暂时不会加入搭桥功能。~~
+
+目前 LeviLamina 貌似已经实现了投影 Mod （类 Litematica，需要使用 LeviLamina 模组加载器）；也有类似的基于原生接口（Addons）的 [Holoprint](https://github.com/SuperLlama88888/holoprint)。
+但目前我估计有这需求的用户应该不多，所以暂时不加入此功能。
+
+如果您实在需要这个功能，请给我提 issue，那么那时我会做的。
 
 ## 参考
 

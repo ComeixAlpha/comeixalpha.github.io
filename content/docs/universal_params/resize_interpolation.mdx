@@ -7,6 +7,33 @@ description: 选择裁剪 / 缩放时的滤波器
 
 这个参数允许您在裁剪或缩放图像时选择不同的滤波器。不同的滤波器会产生不同的效果。
 
+对于一般的图片，使用 Laczos3 滤波器可以获得最舒适的效果；对于像素画，使用 Nearest 滤波器可以保留原始像素结构。
+
+如果对像素画应用了非 Nearest 的滤波器，可能会出现像素画边缘模糊、颜色混合的情况。
+
+<figure className="grid grid-cols-2 gap-4 [&_div]:flex [&_div]:flex-col [&_div]:items-center [&_img]:my-auto [&_img]:h-50 [&_img]:w-auto [&_img]:object-contain [&_p]:my-0">
+  <div className="col-span-2">
+    ![Image title](../../assets/params/universal/metastasis.png)
+    <figcaption className="text-center text-sm text-fd-muted-foreground">
+      原始图像 66*78 | 泰拉瑞亚大型模组 灾厄 物品 [“硫心恶殖”](https://calamity.huijiwiki.com/wiki/%E7%A1%AB%E5%BF%83%E6%81%B6%E6%AE%96)
+    </figcaption>
+  </div>
+  <div>
+    ![Image
+    title](../../assets/params/universal/metastasis_256x_CIEDE2000_nearest.png)
+    <figcaption className="text-center text-sm text-fd-muted-foreground">
+      Nearest 256*? CIEDE2000
+    </figcaption>
+  </div>
+  <div>
+    ![Image
+    title](../../assets/params/universal/metastasis_256x_CIEDE2000_catmullrom.png)
+    <figcaption className="text-center text-sm text-fd-muted-foreground">
+      CatmullRom 256*? CIEDE2000
+    </figcaption>
+  </div>
+</figure>
+
 ## 可选的滤波器
 
 ### Nearest

@@ -1,5 +1,6 @@
-export const appName = 'Colorify Docs';
+export const appName = 'ComeixAlpha Docs';
 export const docsRoute = '/docs';
+export const wikiRoute = '/ftdwiki';
 export const docsImageRoute = '/og/docs';
 export const docsContentRoute = '/llms.mdx/docs';
 
