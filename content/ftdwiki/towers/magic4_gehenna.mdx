@@ -24,6 +24,7 @@ import furnace_of_iquity from "../../assets/wiki/tower_skills/furnace_of_iniquit
     { label: "血量", value: "150" },
     { label: "攻击力", value: "0 ~ 200" },
     { label: "攻击速度", value: "20 次每秒" },
+    { label: "伤害类型", value: "魔法-火焰" },
   ]}
   lore="硫磺与火"
 >
@@ -52,7 +53,7 @@ $$
 
 意思就是，在这样的情况下，地狱塔锁定单个敌人长达 **10s** 后对其造成的伤害约为 **1500**。
 
-特别地，当地狱之塔攻击的目标是BOSS时，固定造成每秒 **50** 点（魔法类-火焰）伤害
+特别地，当地狱之塔攻击的目标是 BOSS 时，固定造成每秒 **50** 点（魔法类-火焰）伤害。
 
 </GameInfoBox>
 
@@ -63,6 +64,7 @@ $$
   attributes={[
     { label: "升级花费", value: "80" },
     { label: "可用等级", value: "0 / 1" },
+    { label: "冷却时间", value: "40 秒" },
   ]}
 >
 
@@ -70,7 +72,9 @@ $$
 
 > 他们在欣嫩子谷建筑巴力的邱坛，好使自己的儿女经火归摩洛 -- 《耶利米书》32:35
 
-手动释放。使正在攻击的非 BOSS 类敌人死亡，该即死效果无法被任何机制格挡或取消。如果作用的对象是 BOSS，那么效果变为：立即对其造成 200 点（魔法类-火焰）伤害，同时施加无限时长、不可叠加的硫磺火减益，每秒造成 20 点（魔法类-火焰）伤害。
+手动释放。使正在攻击的非 BOSS 类敌人死亡，该即死效果无法被任何机制格挡或取消。如果作用的对象是 BOSS，那么效果变为：立即对其造成 200 点伤害，同时施加无限时长、不可叠加的硫磺火减益，每秒造成 20 点伤害。
+
+此秒杀虽然优先级不如[暗影火枪](./archer4_dark_musket.mdx)的被动技能“融入黑暗”，但目前也没有机制可以阻挡，所以仍然是一个真正意义上的秒杀技能。
 
 </GameInfoBox>
 
@@ -89,3 +93,31 @@ $$
 持续生效。伤害提升的速度增加（$\alpha$ 的值提升至 $0.016923$，在此数值下，10s 造成的伤害约 1700）。如果主动技能已经解锁，每杀死一个敌人使得主动技能的冷却减少 **2s**。
 
 </GameInfoBox>
+
+## 轶事
+
+- 该塔名字 “Gehenna” 来源于希伯来语中对过去位于耶路撒冷城墙外的谷地[“欣嫩谷”](https://baike.baidu.com/item/%E6%AC%A3%E5%AB%A9%E8%B0%B7/212329)（亦称欣嫩子谷）的称呼 “Ge Hinnom”。
+其词源可追溯至后圣经希伯来语 “gehinnom”，意指“地狱，死者的火焰折磨之地”。
+在《圣经》希腊文中为 “Gehenna”（γεέννα），中文音译为“矶汉拿”。
+其意义现已从一个具体的地理名称演变为犹太教、基督教及伊斯兰教经典与神话中“地狱”、“永火之地”或“罪人受罚之处”的核心象征。
+在《希腊语经卷》中，“矶汉拿”一词出现了12次，其中5次与火关联。
+
+- 该塔图标来源于游戏《以撒的结合：重生》（The Binding of Isaac: Rebirth）中的道具[“硫磺火”](https://isaac.huijiwiki.com/wiki/C118)。
+
+其图标来源于炼金术中的硫磺，也称“利维坦十字” （The Leviathan Cross）/ “撒旦十字” （The Satan's Cross）。
+撒但教创始人 Anton LaVey 在撒但圣经中将该图标用作地狱的象征，现在这个图标常常让人联想到恶魔崇拜等信仰。
+
+<figure className="grid grid-cols-2 gap-4 [&_div]:flex [&_div]:flex-col [&_div]:items-center [&_img]:my-auto [&_img]:h-50 [&_img]:w-auto [&_img]:max-w-full [&_img]:object-contain [&_img]:[image-rendering:pixelated] [&_p]:my-0">
+  <div>
+    ![](../../assets/wiki/other/Collectible_Brimstone_icon.png)
+    <figcaption className="text-center text-sm text-fd-muted-foreground">
+      硫磺火 Brimstone
+    </figcaption>
+  </div>
+  <div>
+    ![](../../assets/wiki/other/leviathan-satan-cross-black-and-white-silhouette-illustration-of-alchemical-symbol-for-brimstone-black-sulphur-symbol-isolated-on-white-background-vector.jpg)
+    <figcaption className="text-center text-sm text-fd-muted-foreground">
+      The Leviathan Cross / The Satan's Cross
+    </figcaption>
+  </div>
+</figure>

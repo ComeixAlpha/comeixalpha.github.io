@@ -2,3 +2,31 @@
 title: 游侠塔 Ranger
 description: 三级箭塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/archer_tower_icon_3_1.png";
+
+游侠塔（Ranger）是一座三级箭塔，可由[前哨箭塔](./archer2.mdx)升级而来。
+
+特殊改良后的箭塔，配备有轻型弩弓，且箭矢都已淬毒。
+
+<GameInfoBox
+  title="游侠塔"
+  subtitle="Ranger"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "260" },
+    { label: "血量", value: "120" },
+    { label: "攻击力", value: "7" },
+    { label: "攻击冷却", value: "15 Ticks" },
+  ]}
+>
+
+## 行为
+
+连射 2 枚箭矢，攻击 1 个敌人。
+
+每支箭矢有 25% 概率给目标附加一层 2 秒的中毒效果，至多 3 层，每层中毒造成 5 点剧毒伤害
+
+</GameInfoBox>

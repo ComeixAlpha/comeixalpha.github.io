@@ -2,3 +2,67 @@
 title: 精灵匿所 Elven Hideout
 description: 四级箭塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/archer_tower_icon_4_2.png";
+import entangling_roots from "../../assets/wiki/tower_skills/entangling_roots.png";
+import toxic_infiltration from "../../assets/wiki/tower_skills/toxic_infiltration.png";
+
+精灵匿所（Elven Hideout）是一座四级箭塔，可由[游侠塔](./archer3_ranger.mdx)升级而来。
+
+精灵的秘密据点，控制无形之物攻击敌人。
+
+<GameInfoBox
+  title="精灵匿所"
+  subtitle="Elven Hideout"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "300" },
+    { label: "血量", value: "150" },
+    { label: "攻击力", value: "16" },
+    { label: "攻击冷却", value: "15 Ticks" },
+    { label: "伤害类型", value: "物理-普通" },
+  ]}
+>
+
+## 行为
+
+三只精灵各自发射 1 枚箭矢，随机攻击范围内敌人。
+
+每支箭矢有 10% 概率给目标附加一层 2 秒的中毒效果，至多 3 层，每层中毒造成 7 点<span className="text-gray-500">（魔法-剧毒）</span>伤害。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="禁锢藤蔓"
+  subtitle="Entangling Roots"
+  image={entangling_roots.src}
+  attributes={[
+    { label: "升级花费", value: "80" },
+    { label: "可用等级", value: "0 / 1 / 2" },
+    { label: "冷却时间", value: "40 秒" },
+  ]}
+>
+
+## 主动技能 禁锢藤蔓 Entangling Roots
+
+使用时，立刻在使用者瞄准的方块处钻出一条藤蔓，对半径为 6 格范围内的所有敌人造成 20 / 35 点<span className="text-gray-500">（魔法-普通）</span>伤害，并施加 5 / 8 秒的眩晕效果。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="毒素渗透"
+  subtitle="Toxic Infiltration"
+  image={toxic_infiltration.src}
+  attributes={[
+    { label: "升级花费", value: "80" },
+    { label: "可用等级", value: "0 / 1 / 2" },
+  ]}
+>
+
+## 被动技能 毒素渗透 Toxic Infiltration
+
+开启后，将中毒概率提升至 30% / 50%。
+
+</GameInfoBox>

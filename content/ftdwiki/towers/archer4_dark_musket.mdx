@@ -2,3 +2,71 @@
 title: 暗影火枪 Dark Musket
 description: 四级箭塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/archer_tower_icon_4_1.png";
+import shadow_snipe from "../../assets/wiki/tower_skills/shadow_snipe.png";
+import shadowmeld from "../../assets/wiki/tower_skills/shadowmeld.png";
+
+暗影火枪（Dark Musket）是一座四级箭塔，可由[劲弩塔](./archer3_heavy_crossbow.mdx)升级而来。
+
+装填了暗黑子弹的箭塔，可随时将敌人一击毙命。
+
+<GameInfoBox
+  title="暗影火枪"
+  subtitle="Dark Musket"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "320" },
+    { label: "血量", value: "150" },
+    { label: "攻击力", value: "50" },
+    { label: "攻击冷却", value: "44 Ticks" },
+    { label: "伤害类型", value: "物理-普通" },
+  ]}
+>
+
+## 行为
+
+发射子弹攻击 1 个敌人。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="暗影狙击"
+  subtitle="Shadow Snipe"
+  image={shadow_snipe.src}
+  attributes={[
+    { label: "升级花费", value: "80" },
+    { label: "可用等级", value: "0 / 1" },
+    { label: "冷却时间", value: "60 秒" },
+  ]}
+>
+
+## 主动技能 暗影狙击 Shadow Snipe
+
+使用时，立刻锁定全场内 1 名生命值最大的敌人，对其造成自身攻击力 1600% 的伤害
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="融入黑暗"
+  subtitle="Shadowmeld"
+  image={shadowmeld.src}
+  attributes={[
+    { label: "升级花费", value: "80" },
+    { label: "可用等级", value: "0 / 1 / 2" },
+  ]}
+>
+
+## 被动技能 融入黑暗 Shadowmeld
+
+开启后，塔每次攻击时，有小概率使子弹坍缩，强制抹除目标。
+
+此强制抹除拥有极高优先级，是真正意义的秒杀，无视任意试图抵消此效果的机制。
+
+坍缩概率的初始值为 1% / 1.5%。若本次攻击未触发技能，则将下次攻击的坍缩概率提升 1% / 1.5%，直至 8% / 12%；触发技能后，坍缩概率重置为初始值。
+
+攻击目标为 BOSS 时，其无法被强制抹除，也无法叠加坍缩概率。
+
+</GameInfoBox>

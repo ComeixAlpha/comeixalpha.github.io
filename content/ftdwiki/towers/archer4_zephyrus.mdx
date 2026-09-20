@@ -2,3 +2,84 @@
 title: 疾风连弩 Zephyrus
 description: 四级箭塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/archer_tower_icon_4_4.png";
+import zephyr_matrix from "../../assets/wiki/tower_skills/zephyr_matrix.png";
+import ruptura_venti from "../../assets/wiki/tower_skills/ruptura_venti.png";
+
+疾风连弩（Zephyrus）是一座四级箭塔，可由[游侠塔](./archer3_ranger.mdx)升级而来。
+
+极致的射速。
+
+<GameInfoBox
+  title="疾风连弩"
+  subtitle="Zephyrus"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "300" },
+    { label: "血量", value: "150" },
+    { label: "攻击力", value: "8" },
+    { label: "攻击冷却", value: "1 ~ 25 Ticks" },
+    { label: "伤害类型", value: "物理-普通" },
+  ]}
+>
+
+## 行为
+
+发射箭矢攻击 1 个敌人。
+
+每次发射都会削减 3 Ticks 的攻击冷却，最少可削减至 1 Ticks。切换目标时，攻击冷却会重置为 25 Ticks。
+
+每次击中目标有 0.8% 概率使其物理抗性永久降低 1%。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="风云阵"
+  subtitle="Zephyr Matrix"
+  image={zephyr_matrix.src}
+  attributes={[
+    { label: "升级花费", value: "80" },
+    { label: "可用等级", value: "0 / 1 / 2" },
+    { label: "冷却时间", value: "50 秒" },
+  ]}
+>
+
+## 主动技能 风云阵 Zephyr Matrix
+
+使用时，立刻将使用者瞄准的方块视为落点，在其上方半径为 7 格的水平范围内竖直降下 40 支蓄风箭矢。
+
+蓄风箭矢击中敌人时产生风爆。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="风弹爆炸"
+  subtitle="Ruptura Venti"
+  image={ruptura_venti.src}
+  attributes={[
+    { label: "升级花费", value: "120" },
+    { label: "可用等级", value: "0 / 1" },
+  ]}
+>
+
+## 被动技能 风弹爆炸 Ruptura Venti
+
+开启后，每根箭矢击中目标时都有 10% 概率产生风爆。
+
+</GameInfoBox>
+
+## 轶事
+
+- 该塔名字来源于希腊神话中阿涅弥伊里的四大风神之一，西风之神仄费罗斯（Zephyrus）。因此该塔也被称作“风神弩”。
+
+- 被动技能风弹爆炸的译名 Ruptura Venti 来源于拉丁语，“ruptura”一词其根源是动词“rumpere”，意指“打破”或“撕裂”；而“venti”则意指“风”。
+
+<figure className="flex flex-col items-center [&_img]:w-2/3 [&_img]:mx-auto [&_p]:my-0">
+  ![](../../assets/wiki/other/Zeffiro-e-clori-pompeii.jpg)
+  <figcaption className="text-center text-sm text-fd-muted-foreground">
+    The wedding of Zephyrus and Chloris. Antique fresco in Pompeii
+  </figcaption>
+</figure>

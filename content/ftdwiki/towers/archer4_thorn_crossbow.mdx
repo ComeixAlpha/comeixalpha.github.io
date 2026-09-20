@@ -2,3 +2,90 @@
 title: 荆棘重弩 Thorn Crossbow
 description: 四级箭塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/archer_tower_icon_4_3.png";
+import enchanted_thorns from "../../assets/wiki/tower_skills/enchanted_thorns.png";
+import thorn_seed from "../../assets/wiki/tower_skills/thorn_seed.png";
+
+荆棘重弩（Thorn Crossbow）是一座四级箭塔，可由[劲弩塔](./archer3_heavy_crossbow.mdx)升级而来。
+
+搭载磐石般重弩的箭塔，荆棘蔓生于瓦缝之间。
+
+<GameInfoBox
+  title="荆棘重弩"
+  subtitle="Thorn Crossbow"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "280" },
+    { label: "血量", value: "150" },
+    { label: "攻击力", value: "60" },
+    { label: "攻击冷却", value: "30 Ticks" },
+    { label: "伤害类型", value: "物理-普通" },
+  ]}
+>
+
+## 行为
+
+三只精灵各自发射 1 枚箭矢，随机攻击范围内敌人。
+
+每支箭矢有 10% 概率给目标附加一层 2 秒的中毒效果，至多 3 层，每层中毒造成 7 点<span className="text-gray-500">（魔法-剧毒）</span>伤害。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="魔法荆棘"
+  subtitle="Enchanted Thorns"
+  image={enchanted_thorns.src}
+  attributes={[
+    { label: "升级花费", value: "80" },
+    { label: "可用等级", value: "0 / 1 / 2" },
+    { label: "冷却时间", value: "65 秒" },
+  ]}
+>
+
+## 主动技能 魔法荆棘 Enchanted Thorns
+
+### 一级
+
+使用时，在攻击范围内选择至多 8 个敌人施加 1 层 6 秒的荆棘种子效果。
+
+### 二级
+
+包含一级效果。对全图所有拥有荆棘种子效果的敌人造成一次 35 点<span className="text-gray-500">（魔法-普通）</span>伤害，并造成 8 秒眩晕。
+
+如果没有怪物受到影响，则荆棘重弩的下三次攻击将一定附带荆棘种子。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="荆棘种子"
+  subtitle="Thorn Seed"
+  image={thorn_seed.src}
+  attributes={[
+    { label: "升级花费", value: "100" },
+    { label: "可用等级", value: "0 / 1 / 2" },
+  ]}
+>
+
+## 被动技能 荆棘种子 Thorn Seed
+
+开启后，每次攻击都有 30% / 50% 概率给目标施加 1 层 6 秒的荆棘种子效果。
+
+</GameInfoBox>
+
+## 效果 荆棘种子 Thorn Seed
+
+可叠加，上限 6 层。每 6 秒衰减一层。
+
+敌人持有该效果时，受到的所有来源的伤害都会根据种子层数增加。
+
+|层数|增伤|
+|---|---|
+|1|10%|
+|2|20%|
+|3|30%|
+|4|40%|
+|5|45%|
+|6|50%|
