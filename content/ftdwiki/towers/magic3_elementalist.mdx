@@ -2,3 +2,54 @@
 title: 元素魔法使 Elementalist
 description: 三级法术塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/magic_tower_icon_3_2.png";
+
+元素魔法使（Elementalist）是一座三级法术塔，可由[魔法塔](./magic2.mdx)升级而来，可升级为[冰霜精灵](./magic4_cryoaura.mdx)或[魔导书库](./magic4_grimoire_vault.mdx)。
+
+引领寒霜之力的高级魔法塔，抛掷冰弹重击敌人。
+
+<GameInfoBox
+  title="元素魔法使"
+  subtitle="Elementalist"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "250" },
+    { label: "血量", value: "120" },
+    { label: "攻击力", value: "16" },
+    { label: "攻击冷却", value: "44 Ticks" },
+    { label: "伤害类型", value: "魔法-冰霜" },
+  ]}
+>
+
+## 行为
+
+锁定单个敌人，抛掷冰弹对其造成**魔法-冰霜**伤害。
+
+元素魔法使的攻击以 3 次为一轮循环：
+
+- 第 1 次：抛出冰弹，施法者同时做出施法动作；此后仅需 4 Ticks 即可进行第 2 次攻击。
+- 第 2 次：抛出冰弹；此后仅需 4 Ticks 即可进行第 3 次攻击。
+- 第 3 次：抛出冰弹，并额外打出一次冰爆，使目标被**减速 70%**，持续 2 秒；此后回到 44 Ticks 的常规冷却。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="冰爆"
+  subtitle="Ice Boom"
+  attributes={[
+    { label: "触发方式", value: "被动" },
+    { label: "触发间隔", value: "8 ~ 10 秒" },
+  ]}
+>
+
+## 被动能力 冰爆 Ice Boom
+
+持续生效。元素魔法使会以 **8 ~ 10 秒**的随机间隔，在射程内随机一名敌人所在的位置引爆冰爆：
+
+- 对半径 **3 格**内的全部敌人施加 **2 秒**的冻结；
+- 冻结结束后，范围内敌人继续被 **50%** 减速 1 秒。
+
+</GameInfoBox>

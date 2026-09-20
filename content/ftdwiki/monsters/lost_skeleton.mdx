@@ -1,0 +1,33 @@
+---
+title: 流亡骷髅 Lost Skeleton
+description: 怪物 · 序章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/lost_skeleton.png";
+
+流亡骷髅（Lost Skeleton）是序章的常见怪物。
+
+<GameInfoBox
+  title="流亡骷髅"
+  subtitle="Lost Skeleton"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "110" },
+    { label: "攻击力", value: "无（不攻击）" },
+    { label: "移动速度", value: "中" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "16 ~ 17" },
+  ]}
+>
+
+## 行为
+
+被蘑菇寄生的骷髅，难以对外界事物作出反应。
+
+- **无法被阻挡**：不会被士兵拦截，也不会与任何单位交战，只会一路走向我方水晶。
+- 自身不具备攻击能力，因此只能靠输出尽快将其击杀。
+
+</GameInfoBox>

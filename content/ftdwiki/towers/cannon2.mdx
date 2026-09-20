@@ -2,3 +2,36 @@
 title: 火炮塔 Flame Cannon
 description: 二级炮塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/cannon_tower_icon_2.png";
+
+火炮塔（Flame Cannon）是一座二级炮塔，可由[炮塔](./cannon1.mdx)升级而来，可升级为[榴弹工厂](./cannon3_grenade_factory.mdx)或[熔岩矿井](./cannon3_magma_miner.mdx)。
+
+军用特战炮塔，装填了火焰弹。
+
+<GameInfoBox
+  title="火炮塔"
+  subtitle="Flame Cannon"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "210" },
+    { label: "血量", value: "100" },
+    { label: "攻击力", value: "17" },
+    { label: "攻击冷却", value: "50 Ticks" },
+    { label: "伤害类型", value: "物理-爆炸" },
+  ]}
+>
+
+## 行为
+
+向射程内敌人最密集的位置抛射炮弹，炮弹命中敌人或触地后爆炸，对半径 **4 格**内的全部目标造成伤害。
+
+爆炸命中的目标有 **30%** 概率被点燃，在 3 秒内每秒受到 **10** 点<span className="text-gray-500">（物理-火焰）</span>伤害。
+
+若火炮塔受到[自然之塔](./aux2_natural.mdx)的增益，点燃概率提升至 **45%**。
+
+炮塔无法攻击飞行单位。
+
+</GameInfoBox>

@@ -1,0 +1,36 @@
+---
+title: 骷髅弓箭手 Skeleton Archer
+description: 怪物 · 序章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/skeleton_archer.png";
+
+> 骷髅们都有当弓箭手的天赋，它们的箭术甚至比人类还要精湛，据说这是因为它们的骨骼结构更适合拉弓。
+
+骷髅弓箭手（Skeleton Archer）是序章的常见怪物。
+
+<GameInfoBox
+  title="骷髅弓箭手"
+  subtitle="Skeleton Archer"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "60" },
+    { label: "攻击力", value: "4" },
+    { label: "攻击冷却", value: "60 Ticks" },
+    { label: "攻击范围", value: "8 格" },
+    { label: "移动速度", value: "中" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "10 ~ 11" },
+  ]}
+>
+
+## 行为
+
+普通的骷髅，用弓进行远程攻击。
+
+被士兵拦截后，会在 8 格内与我方单位对射。
+
+</GameInfoBox>

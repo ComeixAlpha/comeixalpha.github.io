@@ -1,0 +1,35 @@
+---
+title: 尸壳 Husk
+description: 怪物 · 第一章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/husk.png";
+
+尸壳（Husk）是第一章的常见怪物。
+
+<GameInfoBox
+  title="尸壳"
+  subtitle="Husk"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "150" },
+    { label: "攻击力", value: "6" },
+    { label: "攻击冷却", value: "40 Ticks" },
+    { label: "移动速度", value: "慢" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "13 ~ 14" },
+  ]}
+>
+
+## 行为
+
+僵尸的沙漠变种，防御力比一般僵尸略高。
+
+血量相比僵尸大幅提升，是第一章的基础前排。
+
+死亡后其尸体可被[尸壳丰收者](./husk_harvester.mdx)与[尸壳收割者](./husk_reaper.mdx)利用，详见两者条目。
+
+</GameInfoBox>

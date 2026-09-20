@@ -1,0 +1,46 @@
+---
+title: 岩浆怪 Magma Cube
+description: 怪物 · 第一章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/magma_cube.png";
+
+岩浆怪（Magma Cube）是第一章的特殊怪物，共有大、中、小三种尺寸。
+
+<GameInfoBox
+  title="岩浆怪"
+  subtitle="Magma Cube"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "30 / 60 / 100" },
+    { label: "攻击力", value: "2 / 4 / 8" },
+    { label: "攻击冷却", value: "10 Ticks" },
+    { label: "移动速度", value: "中（大型为慢）" },
+    { label: "物理抗性", value: "低（15%）" },
+    { label: "魔法抗性", value: "火 50% / 冰 -50%" },
+    { label: "击杀掉落", value: "2 ~ 9" },
+  ]}
+>
+
+## 行为
+
+体内充满岩浆的史莱姆。有一定的火焰抗性，惧怕寒冰伤害。
+
+- 拥有**大、中、小**三种尺寸，尺寸越大血量、攻击力越高、移速越慢；
+- 较大尺寸的个体死亡时，会分裂成 **2 ~ 3** 个较小尺寸的个体。
+
+攻击间隔仅 10 Ticks，虽然单次伤害不高，但成群后输出频率极高。惧怕寒冰，冰霜类塔可以快速清空整条分裂链。
+
+</GameInfoBox>
+
+## 尺寸一览
+
+|尺寸|血量|攻击力|移动速度|击杀掉落|死亡分裂|
+|---|---|---|---|---|---|
+|大型|100|8|慢|7 ~ 9|中型 × 2~3|
+|中型|60|4|中|4 ~ 5|小型 × 2~3|
+|小型|30|2|中|2|—|
+
+三种尺寸的攻击冷却均为 10 Ticks，物理抗性均为 15%，魔法抗性均为火焰 50%、寒冰 -50%。

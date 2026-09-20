@@ -2,3 +2,73 @@
 title: 魔导书库 Grimoire Vault
 description: 四级法术塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/magic_tower_icon_4_3.png";
+import sky_fall from "../../assets/wiki/tower_skills/sky_fall.png";
+import aether_dispersion from "../../assets/wiki/tower_skills/aether_dispersion.png";
+
+魔导书库（Grimoire Vault）是一座四级法术塔，可由[元素魔法使](./magic3_elementalist.mdx)升级而来。
+
+<GameInfoBox
+  title="魔导书库"
+  subtitle="Grimoire Vault"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "300" },
+    { label: "血量", value: "150" },
+    { label: "攻击力", value: "20" },
+    { label: "攻击冷却", value: "40 Ticks" },
+    { label: "伤害类型", value: "魔法-火焰" },
+  ]}
+>
+
+## 行为
+
+每轮攻击同时发射 3 颗法术飞弹，分别追击射程内的 3 个敌人。
+
+若射程内敌人不足 3 个，则飞弹会重复打向已有的目标。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="天空坠落"
+  subtitle="Sky Fall"
+  image={sky_fall.src}
+  attributes={[
+    { label: "升级花费", value: "80" },
+    { label: "可用等级", value: "0 / 1" },
+    { label: "冷却时间", value: "40 秒" },
+  ]}
+>
+
+## 主动技能 天空坠落 Sky Fall
+
+使用时，立刻将使用者瞄准的方块视为落点，在其正上方展开逐渐扩大的法阵。
+
+**10 秒**后，一道光柱自天空坠落，对落点周围半径 **20 格**内的全部敌人结算伤害：
+
+- 生命值不高于 **500** 的非 BOSS 敌人，被直接抹除；
+- 生命值高于 **500** 的非 BOSS 敌人，受到其**已损失生命值 50%** 的<span className="text-gray-500">（魔法-普通）</span>伤害；
+- BOSS 则固定受到 **1000** 点<span className="text-gray-500">（魔法-普通）</span>伤害。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="以太弥散"
+  subtitle="Aether Dispersion"
+  image={aether_dispersion.src}
+  attributes={[
+    { label: "升级花费", value: "80" },
+    { label: "可用等级", value: "0 / 1 / 2" },
+  ]}
+>
+
+## 被动技能 以太弥散 Aether Dispersion
+
+开启后，法术飞弹不再固定造成魔法-火焰伤害，而是在**物理-爆炸、物理-火焰、魔法-火焰、魔法-冰霜、魔法-雷电、魔法-剧毒**之间随机选取一种伤害类型。
+
+一级时飞弹伤害为 **20**；二级时提升至 **30**。
+
+</GameInfoBox>

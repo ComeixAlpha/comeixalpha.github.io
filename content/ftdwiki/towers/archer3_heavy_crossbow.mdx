@@ -6,7 +6,7 @@ description: 三级箭塔
 import { GameInfoBox } from "@/components/gameInfoBox";
 import icon from "../../assets/wiki/tower_icons/archer_tower_icon_3_2.png";
 
-劲弩塔（Heavy Crossbow）是一座三级箭塔，可由[前哨箭塔](./archer2.mdx)升级而来。
+劲弩塔（Heavy Crossbow）是一座三级箭塔，可由[前哨箭塔](./archer2.mdx)升级而来，可升级为[暗影火枪](./archer4_dark_musket.mdx)或[荆棘重弩](./archer4_thorn_crossbow.mdx)。
 
 特殊改良后的箭塔，配备有强力弩弓，适于远程精确打击。
 
@@ -20,13 +20,17 @@ import icon from "../../assets/wiki/tower_icons/archer_tower_icon_3_2.png";
     { label: "血量", value: "120" },
     { label: "攻击力", value: "32" },
     { label: "攻击冷却", value: "30 Ticks" },
+    { label: "攻击范围", value: "26 格" },
+    { label: "伤害类型", value: "物理-普通" },
   ]}
 >
 
 ## 行为
 
-发射箭矢攻击 1 个敌人。
+建造后，塔顶会站上一名持弩的弩手。
 
-每次攻击有 25% 的概率穿透目标的护甲，并有 15% 的概率暴击。
+锁定射程内的 1 个敌人，向其发射一支重弩箭矢并造成伤害。
+
+每次攻击有 **25%** 的概率穿透目标的护甲，并有 **15%** 的概率暴击。
 
 </GameInfoBox>

@@ -6,7 +6,9 @@ description: 三级法术塔
 import { GameInfoBox } from "@/components/gameInfoBox";
 import icon from "../../assets/wiki/tower_icons/magic_tower_icon_3_1.png";
 
-天灾术士（Scourge Warlock）是一座三级法术塔，可由[魔法塔](./magic2.mdx)升级而来。
+天灾术士（Scourge Warlock）是一座三级法术塔，可由[魔法塔](./magic2.mdx)升级而来，可升级为[地狱之塔](./magic4_gehenna.mdx)或[灵火熔炉](./magic4_soulfire_furnace.mdx)。
+
+引领天灾之力的高级魔法塔，发射带电火球重击敌人。
 
 <GameInfoBox
   title="天灾术士"
@@ -17,14 +19,18 @@ import icon from "../../assets/wiki/tower_icons/magic_tower_icon_3_1.png";
     { label: "建造花费", value: "290" },
     { label: "血量", value: "120" },
     { label: "攻击力", value: "69" },
-    { label: "攻击速度", value: "1.9 秒一次" },
+    { label: "攻击冷却", value: "38 Ticks" },
+    { label: "攻击范围", value: "19 格" },
+    { label: "伤害类型", value: "魔法-火焰" },
   ]}
 >
 
 ## 行为
 
-发射 3 颗带电火球，追击敌人并造成火焰伤害。
+建造后，塔顶会站上一名身披红袍的术士。
 
-每三次攻击额外发射一枚闪电弹，使敌人眩晕 1 秒。
+锁定射程内的 1 个敌人，射出 3 颗带电火球追击目标，命中后造成**魔法-火焰**伤害。
+
+每第 3 次攻击会额外降下一道闪电，使目标眩晕 **1 秒**。
 
 </GameInfoBox>

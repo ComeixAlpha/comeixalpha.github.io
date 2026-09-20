@@ -2,3 +2,38 @@
 title: 自然之塔 Natural
 description: 二级辅助塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/aux_tower_icon_2_1.png";
+
+自然之塔（Natural）是一座二级辅助塔，可由[辅助塔](./aux1.mdx)升级而来。
+
+得到强化的辅助塔，能储备更多魔力，用于增益我方单位。
+
+<GameInfoBox
+  title="自然之塔"
+  subtitle="Natural"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "90" },
+    { label: "血量", value: "100" },
+  ]}
+>
+
+## 行为
+
+辅助塔自身不会攻击，也不会被敌人锁定。
+
+自然之塔始终处于蓄力状态，顶端会周期性地升起充能光效；当它锁定了增益目标时，还会向目标塔持续发射一条连接光束。
+
+## 支援
+
+使用支援法杖选中一座辅助塔，再对另一座非辅助塔使用，即可使前者为后者提供增益。
+
+- 受增益的塔，**攻击力提升 40%**。
+- 受增益的塔，**暴击率提升 10%**。
+
+该增益在同一时间内只能作用于 1 座塔。为目标塔重新指定辅助塔，或辅助塔被摧毁、拆除时，增益立刻消失。
+
+</GameInfoBox>

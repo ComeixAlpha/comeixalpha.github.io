@@ -1,0 +1,33 @@
+---
+title: 恼鬼 Vex
+description: 怪物 · 第一章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/vex.png";
+
+恼鬼（Vex）是第一章的常见怪物。
+
+<GameInfoBox
+  title="恼鬼"
+  subtitle="Vex"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "60" },
+    { label: "攻击力", value: "5" },
+    { label: "攻击冷却", value: "30 Ticks" },
+    { label: "移动速度", value: "中" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "5 ~ 7" },
+  ]}
+>
+
+## 行为
+
+由积怨化成的恶灵。
+
+- **飞行单位**：无视地形与路径，沿直线扑向我方；无法被士兵拦截，也无法被炮塔攻击。
+
+</GameInfoBox>

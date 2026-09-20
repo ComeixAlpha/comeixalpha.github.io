@@ -2,3 +2,30 @@
 title: 术式塔 Arcanist
 description: 一级法术塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/magic_tower_icon_1.png";
+
+术式塔（Arcanist）是一座一级法术塔，五大基础塔之一，可在空基座直接建造，可升级为[魔法塔](./magic2.mdx)。
+
+低级的魔法塔，装配有简易的攻击术式，以消耗魔力发射元素子弹。
+
+<GameInfoBox
+  title="术式塔"
+  subtitle="Arcanist"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "125" },
+    { label: "血量", value: "80" },
+    { label: "攻击力", value: "11" },
+    { label: "攻击冷却", value: "40 Ticks" },
+    { label: "伤害类型", value: "魔法-普通" },
+  ]}
+>
+
+## 行为
+
+发射 1 颗元素子弹，追击敌人并造成魔法伤害。
+
+</GameInfoBox>

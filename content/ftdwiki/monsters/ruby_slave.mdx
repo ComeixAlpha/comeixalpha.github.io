@@ -1,0 +1,35 @@
+---
+title: 红宝石奴仆 Ruby Slave
+description: 怪物 · 第一章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/ruby_slave.png";
+
+红宝石奴仆（Ruby Slave）是[红宝石法师](./the_ruby_slumberer_mage.mdx)的召唤物。
+
+<GameInfoBox
+  title="红宝石奴仆"
+  subtitle="Ruby Slave"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "200" },
+    { label: "攻击力", value: "5" },
+    { label: "攻击冷却", value: "40 Ticks" },
+    { label: "移动速度", value: "慢" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "0 ~ 1" },
+  ]}
+>
+
+## 行为
+
+受红宝石魔力支配的骷髅，一举一动都反映着操控者的意志。
+
+由红宝石法师每 **20 秒**召唤 2 只。
+
+**只要场上还有任意一只红宝石奴仆存活，红宝石法师就完全免疫所有伤害**；把奴仆清空，才能开始削减法师的血量。
+
+</GameInfoBox>

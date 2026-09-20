@@ -2,3 +2,36 @@
 title: 全知之书 Codex Omnis
 description: 三级辅助塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/aux_tower_icon_3_1.png";
+
+全知之书（Codex Omnis）是一座三级辅助塔，可由[自然之塔](./aux2_natural.mdx)升级而来。
+
+吸收了文明近百年来全部知识的辅助塔，使用全知祝福增益我方单位。
+
+<GameInfoBox
+  title="全知之书"
+  subtitle="Codex Omnis"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "120" },
+    { label: "血量", value: "100" },
+  ]}
+>
+
+## 行为
+
+全知之书自身不会攻击，也不会被敌人锁定。
+
+## 祝福
+
+使用祝福法杖选中全知之书，再对任意方块使用，即可在地面上展开一个半径 **25 格**的法阵，并以落点为中心：
+
+- 对范围内除自身以外的全部塔施加**全知祝福**；
+- 受到全知祝福的塔，其每次攻击额外造成 **30%** 的<span className="text-gray-500">（魔法-普通）</span>伤害。
+
+重新选定落点会先解除上一次法阵范围内的祝福；全知之书被摧毁或拆除时，其施加的全部祝福立刻消失。
+
+</GameInfoBox>

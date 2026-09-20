@@ -1,0 +1,35 @@
+---
+title: 尸壳守护者 Husk Protector
+description: 怪物 · 第一章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/husk_protector.png";
+
+尸壳守护者（Husk Protector）是第一章的常见怪物。
+
+<GameInfoBox
+  title="尸壳守护者"
+  subtitle="Husk Protector"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "340" },
+    { label: "攻击力", value: "12" },
+    { label: "攻击冷却", value: "40 Ticks" },
+    { label: "移动速度", value: "慢" },
+    { label: "物理抗性", value: "中（40%）" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "21 ~ 22" },
+  ]}
+>
+
+## 行为
+
+坚如磐石的守护者，通常被派遣到前线，利用其强大的保护能力来支援其他敌方单位。
+
+每隔 **20 秒**，给予周围 **10 格**内的尸壳单位增益效果，使其物理抗性与魔法抗性各提升 **20%**，持续 **15 秒**。
+
+血量与物抗都很高，且会给整片阵线叠加抗性，遇到时应优先集火点杀。
+
+</GameInfoBox>

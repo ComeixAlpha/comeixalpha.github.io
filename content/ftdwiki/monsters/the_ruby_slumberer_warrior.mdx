@@ -1,0 +1,39 @@
+---
+title: 红宝石战士 Ruby Warrior
+description: 怪物 · BOSS
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/the_ruby_slumberer_warrior.png";
+
+红宝石战士（Ruby Warrior）是第一章的 BOSS，与[红宝石法师](./the_ruby_slumberer_mage.mdx)同为红宝石兄弟。
+
+<GameInfoBox
+  title="红宝石战士"
+  subtitle="Ruby Warrior"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "4800" },
+    { label: "攻击力", value: "80" },
+    { label: "攻击冷却", value: "100 Ticks" },
+    { label: "移动速度", value: "很慢" },
+    { label: "物理抗性", value: "高（50%）" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "50" },
+  ]}
+>
+
+## 行为
+
+红宝石兄弟中的哥哥，沙场之上的兵器大师。
+
+**普通攻击**：手持红宝石斧的横扫，除主目标外，还会对身边 **5 格**内所有我方单位造成 **40** 点<span className="text-gray-500">（物理-普通）</span>的溅射伤害。
+
+**震地**：每隔 **15 秒**震动大地，对周围 **20 格**内的所有士兵与塔造成 **30** 点<span className="text-gray-500">（物理-普通）</span>伤害，并同时召唤 **2** 只[沙蚀蠕虫](./sandworm.mdx)。
+
+**与法师换位**：当红宝石法师的血量首次跌破一半后，战士的下一次受伤会触发换位——两者会交换彼此的行进路线与站位，并在原地留下传送法阵。这一效果只触发一次。
+
+**激怒**：若红宝石法师先被击杀，战士会进入激怒状态，震地与召唤的间隔由 15 秒缩短至 **10 秒**。
+
+</GameInfoBox>

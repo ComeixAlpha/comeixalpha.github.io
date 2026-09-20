@@ -1,0 +1,36 @@
+---
+title: 幽灵 Wraith
+description: 怪物 · 第二章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/wraith.png";
+
+幽灵（Wraith）是第二章的特殊怪物。
+
+<GameInfoBox
+  title="幽灵"
+  subtitle="Wraith"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "50" },
+    { label: "攻击力", value: "6" },
+    { label: "攻击冷却", value: "20 Ticks" },
+    { label: "移动速度", value: "中" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "高（50%）" },
+    { label: "击杀掉落", value: "7 ~ 8" },
+  ]}
+>
+
+## 行为
+
+潜匿在暗影中的幽灵，不被塔和士兵所察觉。
+
+- **飞行单位**：可以穿过方块，沿直线扑向我方。
+- **生成时获得暗影状态**：处于暗影状态时完全隐形，无法被攻击、无法被索敌，也不会主动攻击。
+
+只有[真视之眼](../towers/aux2_visio_vera.mdx)能让幽灵现形；未现形的幽灵会一路穿过防线直达水晶。
+
+</GameInfoBox>

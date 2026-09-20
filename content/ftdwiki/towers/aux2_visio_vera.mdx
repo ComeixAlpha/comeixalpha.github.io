@@ -2,3 +2,40 @@
 title: 真视之眼 Visio Vera
 description: 二级辅助塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/aux_tower_icon_2_2.png";
+
+真视之眼（Visio Vera）是一座二级辅助塔，可由[辅助塔](./aux1.mdx)升级而来。
+
+专门研制以对付幽灵的辅助塔，能够让一切从暗影中现形。
+
+<GameInfoBox
+  title="真视之眼"
+  subtitle="Visio Vera"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "90" },
+    { label: "血量", value: "100" },
+  ]}
+>
+
+## 行为
+
+真视之眼自身不会攻击，也不会被敌人锁定。建造后，塔顶会升起一只浮空的巨眼。
+
+## 显形
+
+使用祝福法杖选中真视之眼，再对任意方块使用，即可将巨眼移动到该处方块上方，并以落点为中心：
+
+- 为半径 **15 格**内的全部怪物破除**暗影形态**，使其**显形 20 秒**；
+- 显形每 **18 Ticks** 重复一次，只要怪物仍处于范围内，就会不断被刷新。
+
+## 效果 暗影形态 Shadow Form
+
+处于暗影形态的怪物完全隐形，且无法被攻击、无法被索敌；持有暗影形态的怪物同时也不会主动攻击。
+
+被真视之眼显形后，怪物会恢复为可被攻击与索敌的常态，离开真视之眼的生效区域后怪物会再次进入暗影形态。
+
+</GameInfoBox>

@@ -1,0 +1,38 @@
+---
+title: 尸壳祭司 Husk Priest
+description: 怪物 · 第一章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/husk_priest.png";
+
+> 《难歌》其二十一：于是，他们在苦难中哀求上帝，他从他们的祸患中搭救他们。又领他们行走直路，使他们往可居住的城邑。
+> 它们一直深信着上帝的善心，直到饥荒肆虐，风暴降临，直到尘沙掩埋了它们的尸体。
+
+尸壳祭司（Husk Priest）是第一章的常见怪物。
+
+<GameInfoBox
+  title="尸壳祭司"
+  subtitle="Husk Priest"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "150" },
+    { label: "攻击力", value: "3" },
+    { label: "攻击冷却", value: "40 Ticks" },
+    { label: "移动速度", value: "慢" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "低（20%）" },
+    { label: "击杀掉落", value: "18 ~ 19" },
+  ]}
+>
+
+## 行为
+
+神圣的祭司，掌握着治疗亡灵的忌法。
+
+每隔 **12 秒**施法一次，回复周围 **5 格**内最多 5 个亡灵单位各 **60%** 的最大生命值。
+
+相比[僵尸祭司](./zombie_priest.mdx)，血量更高，配合第一章的高血量尸壳，治疗收益也更大。
+
+</GameInfoBox>

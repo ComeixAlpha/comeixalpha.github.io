@@ -2,3 +2,36 @@
 title: 榴弹工厂 Grenade Factory
 description: 三级炮塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/cannon_tower_icon_3_1.png";
+
+榴弹工厂（Grenade Factory）是一座三级炮塔，可由[火炮塔](./cannon2.mdx)升级而来。
+
+大型的烟雾工厂，连射 3 发榴弹炸碎敌人。
+
+<GameInfoBox
+  title="榴弹工厂"
+  subtitle="Grenade Factory"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "300" },
+    { label: "血量", value: "120" },
+    { label: "攻击力", value: "20" },
+    { label: "攻击冷却", value: "50 Ticks" },
+    { label: "伤害类型", value: "物理-爆炸" },
+  ]}
+>
+
+## 行为
+
+每次攻击向射程内敌人最密集的位置抛射 3 发榴弹，3 个落点均匀分布在目标周围，各自命中敌人或触地后爆炸，对半径 **3 格**内的全部目标造成伤害。
+
+爆炸命中的目标有 **30%** 概率被点燃，在 3 秒内每秒受到 **10** 点<span className="text-gray-500">（物理-火焰）</span>伤害。
+
+若榴弹工厂受到[自然之塔](./aux2_natural.mdx)的增益，点燃概率提升至 **45%**。
+
+炮塔无法攻击飞行单位。
+
+</GameInfoBox>

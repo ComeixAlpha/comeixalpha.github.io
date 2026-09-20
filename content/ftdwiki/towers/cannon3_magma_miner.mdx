@@ -2,3 +2,42 @@
 title: 熔岩矿井 Magma Miner
 description: 三级炮塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/cannon_tower_icon_3_2.png";
+
+熔岩矿井（Magma Miner）是一座三级炮塔，可由[火炮塔](./cannon2.mdx)升级而来。
+
+开采岩浆矿石的大型矿机，发射岩浆残片攻击敌人。
+
+<GameInfoBox
+  title="熔岩矿井"
+  subtitle="Magma Miner"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "320" },
+    { label: "血量", value: "100" },
+    { label: "攻击力", value: "28" },
+    { label: "攻击冷却", value: "60 Ticks" },
+    { label: "伤害类型", value: "物理-爆炸" },
+  ]}
+>
+
+## 行为
+
+向射程内敌人最密集的位置抛射岩浆残片，残片命中敌人或触地后爆炸，对半径 **5 格**内的全部目标造成伤害。
+
+爆炸命中的目标有 **30%** 概率被点燃，在 3 秒内每秒受到 **10** 点<span className="text-gray-500">（物理-火焰）</span>伤害。
+
+若熔岩矿井受到[自然之塔](./aux2_natural.mdx)的增益，点燃概率提升至 **45%**。
+
+炮塔无法攻击飞行单位。
+
+</GameInfoBox>
+
+## 效果 岩浆地形 Magma Terrain
+
+每次爆炸后，会以爆心正下方的方块为中心，将一片 5 × 5 的地面转化为**岩浆**；其中约有 4 格会被随机遗漏，不被转化。
+
+岩浆地形持续 **5 秒**，期间每秒对其上方经过的敌人造成 **7** 点<span className="text-gray-500">（物理-火焰）</span>伤害；持续时间结束后，地面恢复为被转化前的方块。

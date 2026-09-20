@@ -2,3 +2,32 @@
 title: 炮塔 Cannon
 description: 一级炮塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/cannon_tower_icon_1.png";
+
+炮塔（Cannon）是一座一级炮塔，五大基础塔之一，可在空基座直接建造，可升级为[火炮塔](./cannon2.mdx)。
+
+军用炮塔，使用简制的炮弹进行远程攻击。
+
+<GameInfoBox
+  title="炮塔"
+  subtitle="Cannon"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "115" },
+    { label: "血量", value: "80" },
+    { label: "攻击力", value: "11" },
+    { label: "攻击冷却", value: "60 Ticks" },
+    { label: "伤害类型", value: "物理-爆炸" },
+  ]}
+>
+
+## 行为
+
+向射程内敌人最密集的位置抛射炮弹，炮弹命中敌人或触地后爆炸，对半径 **3 格**内的全部目标造成伤害。
+
+炮塔无法攻击飞行单位。
+
+</GameInfoBox>

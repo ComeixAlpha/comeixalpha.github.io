@@ -1,0 +1,35 @@
+---
+title: 骆驼小队 Team Camel
+description: 怪物 · 第一章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/team_camel.png";
+
+骆驼小队（Team Camel）是第一章的骑兵单位。
+
+<GameInfoBox
+  title="骆驼小队"
+  subtitle="Team Camel"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "260（坐骑）" },
+    { label: "攻击力", value: "6" },
+    { label: "攻击冷却", value: "50 Ticks" },
+    { label: "移动速度", value: "中（冲锋时更快）" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "20 ~ 21" },
+  ]}
+>
+
+## 行为
+
+被亡灵控制的骆驼尸壳，较快的移速使其极易冲破我方阵线。
+
+- **骑兵单位**：生成时同时带上[骆驼骑手](./camel_rider.mdx)与[尸壳掷矛手](./camel_archer.mdx)两名乘客。
+- **未被阻挡时冲锋**：会持续加速冲刺；若在冲锋状态下被士兵拦截，则眩晕一段时间。
+- **坐骑优先受击**：坐骑存在时乘客不会受到任何伤害，伤害全部由坐骑承受；坐骑死亡后乘客才会落地作战。
+
+</GameInfoBox>

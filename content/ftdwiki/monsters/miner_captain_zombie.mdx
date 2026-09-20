@@ -1,0 +1,34 @@
+---
+title: 矿工队长僵尸 Miner Captain Zombie
+description: 怪物 · 第一章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/miner_captain_zombie.png";
+
+矿工队长僵尸（Miner Captain Zombie）是第一章的常见怪物。
+
+<GameInfoBox
+  title="矿工队长僵尸"
+  subtitle="Miner Captain Zombie"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "120" },
+    { label: "攻击力", value: "14" },
+    { label: "攻击冷却", value: "20 Ticks" },
+    { label: "移动速度", value: "慢" },
+    { label: "物理抗性", value: "中（40%）" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "15 ~ 16" },
+  ]}
+>
+
+## 行为
+
+矿工僵尸们的队长，比一般矿工更具威胁。
+
+- **能从战场中出其不意的位置钻上来**：生成时会播放钻地动画。
+- **可以开凿脆弱墙壁**：每次开凿造成 **5** 点进度，间隔仅 **20 Ticks**，开凿效率是矿工僵尸的四倍。
+
+</GameInfoBox>

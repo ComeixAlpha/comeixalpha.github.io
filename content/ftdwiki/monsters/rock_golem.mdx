@@ -1,0 +1,50 @@
+---
+title: 岩石傀儡 Rock Golem
+description: 怪物 · 第二章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/rock_golem.png";
+
+岩石傀儡（Rock Golem）是第二章的精英怪物。
+
+<GameInfoBox
+  title="岩石傀儡"
+  subtitle="Rock Golem"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "500" },
+    { label: "攻击力", value: "—（不主动攻击）" },
+    { label: "移动速度", value: "慢" },
+    { label: "物理抗性", value: "见下表" },
+    { label: "魔法抗性", value: "见下表" },
+    { label: "击杀掉落", value: "47 ~ 48" },
+  ]}
+>
+
+## 行为
+
+由岩石构成的巨型傀儡，本身不会主动攻击，却会强行吸引我方火力。
+
+- **强制吸引火力**：每秒一次，把自身周围所有塔的攻击目标强制改为自己；若某座塔当前的目标也是岩石傀儡，则不会互相覆盖。
+- 因此它会替身后的亡灵部队吃下成吨伤害，但同时也能被塔优先集火。
+
+</GameInfoBox>
+
+## 抗性明细
+
+岩石傀儡对不同伤害类型有截然不同的承受能力：
+
+|伤害类型|抗性|
+|---|---|
+|物理-普通|60%|
+|物理-爆炸|50%|
+|物理-火焰|90%|
+|魔法-普通|20%|
+|魔法-火焰|40%|
+|魔法-雷电|80%|
+|魔法-剧毒|30%|
+|魔法-冰霜|0%|
+
+火焰与雷电对它几乎无效，魔法-冰霜是最有效的输出手段。

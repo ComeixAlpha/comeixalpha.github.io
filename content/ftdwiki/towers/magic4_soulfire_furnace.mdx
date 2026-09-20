@@ -2,3 +2,73 @@
 title: 灵火熔炉 Soulfire Furnace
 description: 四级法术塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/magic_tower_icon_4_4.png";
+import soulfire_storm from "../../assets/wiki/tower_skills/soulfire_storm.png";
+import orbital_expansion from "../../assets/wiki/tower_skills/orbital_expansion.png";
+
+灵火熔炉（Soulfire Furnace）是一座四级法术塔，可由[天灾术士](./magic3_scourge_warlock.mdx)升级而来。
+
+<GameInfoBox
+  title="灵火熔炉"
+  subtitle="Soulfire Furnace"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "300" },
+    { label: "血量", value: "150" },
+    { label: "攻击力", value: "80" },
+    { label: "攻击冷却", value: "10 Ticks" },
+    { label: "伤害类型", value: "魔法-火焰" },
+  ]}
+>
+
+## 行为
+
+灵火熔炉的攻击需要消耗**灵火**。每座灵火熔炉默认最多储存 **4** 层灵火，并以每 **2 秒** 1 层的速度自动补充；被动技能**灵轨扩容**可将上限提升至 **5 / 6** 层。
+
+每轮攻击消耗 1 层灵火，向单个敌人射出火焰，造成 **80** 点**魔法-火焰**伤害。
+
+灵火尚存时，塔身周围会浮现出对应数量的火焰。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="灵火风暴"
+  subtitle="Soulfire Storm"
+  image={soulfire_storm.src}
+  attributes={[
+    { label: "升级花费", value: "80" },
+    { label: "可用等级", value: "0 / 1 / 2" },
+    { label: "冷却时间", value: "40 秒" },
+  ]}
+>
+
+## 主动技能 灵火风暴 Soulfire Storm
+
+使用时，立刻将使用者瞄准的方块视为落点，在其上方召唤一团灵火风暴；落点必须位于灵火熔炉的攻击范围内。
+
+风暴会不停追逐最靠近的、且尚未被灵火灼烧的敌人，靠近后为其附加 **5 秒**的灵火灼烧，每秒造成 **15** 点<span className="text-gray-500">（魔法-火焰）</span>伤害，随后转向下一个目标。
+
+一级时风暴存在 **3 秒**，二级时延长至 **8 秒**。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="灵轨扩容"
+  subtitle="Orbital Expansion"
+  image={orbital_expansion.src}
+  attributes={[
+    { label: "升级花费", value: "80" },
+    { label: "可用等级", value: "0 / 1 / 2" },
+  ]}
+>
+
+## 被动技能 灵轨扩容 Orbital Expansion
+
+持续生效。使灵火熔炉的灵火储存上限提升 1 层。
+
+一级时上限变为 **5** 层，二级时变为 **6** 层。
+
+</GameInfoBox>

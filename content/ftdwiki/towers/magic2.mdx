@@ -2,3 +2,32 @@
 title: 魔法塔 Magician
 description: 二级法术塔
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/magic_tower_icon_2.png";
+
+魔法塔（Magician）是一座二级法术塔，可由[术式塔](./magic1.mdx)升级而来，可升级为[天灾术士](./magic3_scourge_warlock.mdx)或[元素魔法使](./magic3_elementalist.mdx)。
+
+经过升级的魔法塔，储备更多的魔力，消耗魔力发射元素子弹。
+
+<GameInfoBox
+  title="魔法塔"
+  subtitle="Magician"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "202" },
+    { label: "血量", value: "100" },
+    { label: "攻击力", value: "16" },
+    { label: "攻击冷却", value: "38 Ticks" },
+    { label: "伤害类型", value: "魔法-普通" },
+  ]}
+>
+
+## 行为
+
+同时发射 2 颗元素子弹，各自追击敌人并造成魔法伤害。
+
+若射程内只有 1 个敌人，则 2 颗子弹都会打向该敌人。
+
+</GameInfoBox>

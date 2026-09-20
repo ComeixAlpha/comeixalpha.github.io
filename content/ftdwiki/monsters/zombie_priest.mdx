@@ -1,0 +1,38 @@
+---
+title: 僵尸祭司 Zombie Priest
+description: 怪物 · 序章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/zombie_priest.png";
+
+> 《亡灵福音》第13章：对擅用禁忌之法者，主会宽恕他们的罪过，并在来世赐予他们永生。
+> 于是代价接踵而至——他们变成了行尸走肉，而且永生不死。
+
+僵尸祭司（Zombie Priest）是序章的常见怪物。
+
+<GameInfoBox
+  title="僵尸祭司"
+  subtitle="Zombie Priest"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "120" },
+    { label: "攻击力", value: "3" },
+    { label: "攻击冷却", value: "40 Ticks" },
+    { label: "移动速度", value: "慢" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "低（20%）" },
+    { label: "击杀掉落", value: "17 ~ 18" },
+  ]}
+>
+
+## 行为
+
+神圣的祭司，掌握着治疗亡灵的忌法。
+
+每隔 **12 秒**施法一次，回复周围 **5 格**内最多 5 个亡灵单位各 **60%** 的最大生命值；治疗对象不限血量高低。
+
+自身攻击力极低，但高额治疗会显著拖长我方清怪时间，通常需要优先点杀。
+
+</GameInfoBox>

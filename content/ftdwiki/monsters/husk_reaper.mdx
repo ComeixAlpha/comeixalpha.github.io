@@ -1,0 +1,37 @@
+---
+title: 尸壳收割者 Husk Reaper
+description: 怪物 · 第一章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/husk_reaper.png";
+
+> 我们将为你献上一份礼物 —— 一份名为‘死亡’的礼物。
+
+尸壳收割者（Husk Reaper）是第一章的常见怪物。
+
+<GameInfoBox
+  title="尸壳收割者"
+  subtitle="Husk Reaper"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "120" },
+    { label: "攻击力", value: "18" },
+    { label: "攻击冷却", value: "40 Ticks" },
+    { label: "移动速度", value: "慢" },
+    { label: "物理抗性", value: "低（10%）" },
+    { label: "魔法抗性", value: "高（50%）" },
+    { label: "击杀掉落", value: "17 ~ 18" },
+  ]}
+>
+
+## 行为
+
+令人闻风丧胆的收割者。
+
+附近 **15 格**内有尸壳单位死亡时，短时间内大幅提升自身的物理和魔法抗性——两者的临时抗性各提升 **50%**，持续 **10 秒**。
+
+攻击力较高且魔法抗性出众，在尸壳成群时抗性还会不断刷新。
+
+</GameInfoBox>

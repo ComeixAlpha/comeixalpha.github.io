@@ -1,0 +1,35 @@
+---
+title: 骆驼骑手 Camel Rider
+description: 怪物 · 第一章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/camel_rider.png";
+
+骆驼骑手（Camel Rider）是[骆驼小队](./team_camel.mdx)的乘客之一。
+
+<GameInfoBox
+  title="骆驼骑手"
+  subtitle="Camel Rider"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "150" },
+    { label: "攻击力", value: "3" },
+    { label: "攻击冷却", value: "40 Ticks" },
+    { label: "移动速度", value: "慢" },
+    { label: "物理抗性", value: "低（10%）" },
+    { label: "魔法抗性", value: "惧怕雷电（-50%）" },
+    { label: "击杀掉落", value: "13 ~ 14" },
+  ]}
+>
+
+## 行为
+
+尸壳中的驯兽师，精通骆驼骑术。
+
+作为乘客与骆驼小队一同生成，坐骑存活期间不会受到伤害；坐骑阵亡后落地独立作战。
+
+惧怕雷电伤害，承受的魔法-雷电伤害会提高 50%。
+
+</GameInfoBox>

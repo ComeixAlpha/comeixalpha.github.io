@@ -1,0 +1,40 @@
+---
+title: 红宝石法师 Ruby Mage
+description: 怪物 · BOSS
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/the_ruby_slumberer_mage.png";
+
+红宝石法师（Ruby Mage）是第一章的 BOSS，与[红宝石战士](./the_ruby_slumberer_warrior.mdx)同为红宝石兄弟。
+
+<GameInfoBox
+  title="红宝石法师"
+  subtitle="Ruby Mage"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "3900" },
+    { label: "攻击力", value: "30" },
+    { label: "攻击冷却", value: "40 Ticks" },
+    { label: "攻击范围", value: "6 格" },
+    { label: "移动速度", value: "很慢" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "50" },
+  ]}
+>
+
+## 行为
+
+红宝石兄弟中的弟弟，魔法之巅的智者。
+
+- **多段魔法伤害**：每次攻击造成多段魔法伤害，在 6 格范围内施法。
+- **召唤奴仆**：每隔 **20 秒**召唤 **2** 只[红宝石奴仆](./ruby_slave.mdx)协助作战。
+- **奴仆在则免伤**：只要场上还有任意一只红宝石奴仆存活，法师就完全免疫所有伤害——所受伤害会被直接抵消并弹出格挡特效。
+
+因此，处理红宝石法师的关键在于**先清空奴仆**，再集火法师本体；否则打出的所有伤害都是白费。
+
+若法师先被击杀，红宝石战士会进入激怒状态，详见[红宝石战士](./the_ruby_slumberer_warrior.mdx)。
+
+</GameInfoBox>

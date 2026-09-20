@@ -6,7 +6,7 @@ description: 三级箭塔
 import { GameInfoBox } from "@/components/gameInfoBox";
 import icon from "../../assets/wiki/tower_icons/archer_tower_icon_3_1.png";
 
-游侠塔（Ranger）是一座三级箭塔，可由[前哨箭塔](./archer2.mdx)升级而来。
+游侠塔（Ranger）是一座三级箭塔，可由[前哨箭塔](./archer2.mdx)升级而来，可升级为[疾风连弩](./archer4_zephyrus.mdx)或[精灵匿所](./archer4_elven_hideout.mdx)。
 
 特殊改良后的箭塔，配备有轻型弩弓，且箭矢都已淬毒。
 
@@ -20,13 +20,17 @@ import icon from "../../assets/wiki/tower_icons/archer_tower_icon_3_1.png";
     { label: "血量", value: "120" },
     { label: "攻击力", value: "7" },
     { label: "攻击冷却", value: "15 Ticks" },
+    { label: "攻击范围", value: "21 格" },
+    { label: "伤害类型", value: "物理-普通" },
   ]}
 >
 
 ## 行为
 
-连射 2 枚箭矢，攻击 1 个敌人。
+建造后，塔顶会站上两名持弓的游侠。
 
-每支箭矢有 25% 概率给目标附加一层 2 秒的中毒效果，至多 3 层，每层中毒造成 5 点剧毒伤害
+锁定射程内的 1 个敌人，两名游侠先后射出箭矢，每支箭矢造成一次伤害；第二支箭矢在 5 Ticks 后射出。
+
+每支箭矢有 **25%** 的概率给目标附加一层 3 秒的中毒效果，至多 3 层，每层中毒每秒造成 **5** 点<span className="text-gray-500">（魔法-剧毒）</span>伤害。
 
 </GameInfoBox>

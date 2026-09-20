@@ -6,7 +6,7 @@ description: 二级箭塔
 import { GameInfoBox } from "@/components/gameInfoBox";
 import icon from "../../assets/wiki/tower_icons/archer_tower_icon_2.png";
 
-前哨箭塔（Outpost Archer）是一座二级箭塔，可由[箭塔](./archer1.mdx)升级而来。
+前哨箭塔（Outpost Archer）是一座二级箭塔，可由[箭塔](./archer1.mdx)升级而来，可升级为[游侠塔](./archer3_ranger.mdx)或[劲弩塔](./archer3_heavy_crossbow.mdx)。
 
 军用的标准箭塔，拥有更远的射程和更高的伤害。
 
@@ -20,13 +20,17 @@ import icon from "../../assets/wiki/tower_icons/archer_tower_icon_2.png";
     { label: "血量", value: "100" },
     { label: "攻击力", value: "12" },
     { label: "攻击冷却", value: "17 Ticks" },
+    { label: "攻击范围", value: "20 格" },
+    { label: "伤害类型", value: "物理-普通" },
   ]}
 >
 
 ## 行为
 
-发射箭矢攻击 1 个敌人。
+建造后，塔顶会站上一名持弓的弓箭手。
 
-每次攻击有 10% 的概率暴击。
+锁定射程内的 1 个敌人，向其射出一支箭矢并造成伤害；攻击时弓箭手会转身面向目标。
+
+每次攻击有 **10%** 的概率暴击，暴击造成 1.5 倍伤害。
 
 </GameInfoBox>

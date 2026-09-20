@@ -1,0 +1,37 @@
+---
+title: 腐朽尸壳 Decayed Husk
+description: 怪物 · 第一章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/decayed_husk.png";
+
+腐朽尸壳（Decayed Husk）是第一章的常见怪物。
+
+<GameInfoBox
+  title="腐朽尸壳"
+  subtitle="Decayed Husk"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "80" },
+    { label: "攻击力", value: "6" },
+    { label: "攻击冷却", value: "40 Ticks" },
+    { label: "移动速度", value: "慢" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "9 ~ 10" },
+  ]}
+>
+
+## 行为
+
+躯体腐烂的尸壳，身上长出了易爆的真菌。
+
+较普通尸壳更加危险，控制击杀它们的时机尤为重要。
+
+死亡时原地爆炸，对半径 **3 格**内**非亡灵**的单位造成 **30** 点<span className="text-gray-500">（物理-普通）</span>伤害——也就是说，爆炸只会伤到我方士兵与建筑。
+
+此外，腐朽尸壳是[尸壳丰收者](./husk_harvester.mdx)的召唤产物。
+
+</GameInfoBox>

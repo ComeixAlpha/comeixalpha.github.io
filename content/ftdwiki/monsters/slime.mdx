@@ -1,0 +1,35 @@
+---
+title: 史莱姆 Slime
+description: 怪物 · 序章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/slime.png";
+
+> 嘿嘿，跳来跳去可爱捏。
+
+史莱姆（Slime）是序章的常见怪物。
+
+<GameInfoBox
+  title="史莱姆"
+  subtitle="Slime"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "30" },
+    { label: "攻击力", value: "3" },
+    { label: "攻击冷却", value: "30 Ticks" },
+    { label: "移动速度", value: "中" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "3 ~ 4" },
+  ]}
+>
+
+## 行为
+
+最小的史莱姆，一蹦一跳地前进。
+
+攻击时会先蓄力跳起，随后砸向目标。
+
+</GameInfoBox>

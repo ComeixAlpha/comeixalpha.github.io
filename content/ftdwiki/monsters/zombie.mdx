@@ -1,0 +1,33 @@
+---
+title: 僵尸 Zombie
+description: 怪物 · 序章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/zombie.png";
+
+僵尸（Zombie）是序章的常见怪物。
+
+<GameInfoBox
+  title="僵尸"
+  subtitle="Zombie"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "60" },
+    { label: "攻击力", value: "5" },
+    { label: "攻击冷却", value: "40 Ticks" },
+    { label: "移动速度", value: "慢" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "7 ~ 8" },
+  ]}
+>
+
+## 行为
+
+普通的僵尸。最平常不过的亡灵生物。
+
+沿着路径行进，被士兵拦截后与其交战。
+
+</GameInfoBox>

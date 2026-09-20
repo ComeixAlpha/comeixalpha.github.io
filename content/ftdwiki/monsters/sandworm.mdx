@@ -1,0 +1,35 @@
+---
+title: 沙蚀蠕虫 Sandworm
+description: 怪物 · 第一章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/sandworm.png";
+
+沙蚀蠕虫（Sandworm）是第一章的常见怪物。
+
+<GameInfoBox
+  title="沙蚀蠕虫"
+  subtitle="Sandworm"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "30" },
+    { label: "攻击力", value: "3" },
+    { label: "攻击冷却", value: "10 Ticks" },
+    { label: "移动速度", value: "快" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "3 ~ 4" },
+  ]}
+>
+
+## 行为
+
+被沙子侵蚀了身躯的蠕虫，生活在岩浆区域，移速较快。
+
+生成时会从地面钻出；血量很低但速度快、攻击频率高。
+
+[红宝石战士](./the_ruby_slumberer_warrior.mdx)的震地技能会一次召唤 2 只沙蚀蠕虫。
+
+</GameInfoBox>

@@ -1,0 +1,33 @@
+---
+title: 森林狼 Forest Wolf
+description: 怪物 · 序章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/forest_wolf.png";
+
+森林狼（Forest Wolf）是序章的常见怪物。
+
+<GameInfoBox
+  title="森林狼"
+  subtitle="Forest Wolf"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "40" },
+    { label: "攻击力", value: "4" },
+    { label: "攻击冷却", value: "30 Ticks" },
+    { label: "移动速度", value: "极快（7 级）" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "3 ~ 4" },
+  ]}
+>
+
+## 行为
+
+森林中敏捷的猎手，成群出现且移速较快，通常需要拦截。
+
+血量较低但移动速度极快，一旦突破防线就会迅速接近水晶。
+
+</GameInfoBox>

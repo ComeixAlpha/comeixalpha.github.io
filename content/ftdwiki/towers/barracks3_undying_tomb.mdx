@@ -2,3 +2,59 @@
 title: 不死墓碑 Undying Tomb
 description: 三级兵营
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/barracks_tower_icon_3_3.png";
+import soldier_icon from "../../assets/wiki/soldiers/undying_soldier.png";
+
+不死墓碑（Undying Tomb）是一座三级兵营，可由[前线兵营](./barracks2.mdx)升级而来。
+
+可以通灵的兵营，用来驻扎亡兵。
+
+<GameInfoBox
+  title="不死墓碑"
+  subtitle="Undying Tomb"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "170" },
+    { label: "血量", value: "120" },
+    { label: "驻守士兵", value: "4 名" },
+    { label: "部署范围", value: "20 格" },
+  ]}
+>
+
+## 行为
+
+兵营自身不会攻击。建造后会立即在最近的路径点召唤 4 名**亡兵**，之后也可以手动调整驻守位置。
+
+士兵会在驻守点附近 **3 格**范围内活动，拦截并攻击经过的地面敌人；亡兵阵亡后，仅需 **5 秒**便会在驻守点复活。
+
+升级时原有的驻守点会被继承。
+
+兵营被摧毁或拆除时，其麾下士兵会一并消失。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="亡兵"
+  subtitle="Undying Soldier"
+  type="ally"
+  image={soldier_icon.src}
+  attributes={[
+    { label: "血量", value: "35" },
+    { label: "攻击力", value: "5" },
+    { label: "攻击冷却", value: "12 Ticks" },
+    { label: "复活时间", value: "5 秒" },
+  ]}
+>
+
+## 盟友 亡兵 Undying Soldier
+
+起死回生的士兵，重生的身躯只剩下一具骨骸。
+
+- 拦截并攻击地面单位。
+- 复活速度极快。
+- 停止行动 4 秒后，每秒恢复 8 点血量。
+
+</GameInfoBox>

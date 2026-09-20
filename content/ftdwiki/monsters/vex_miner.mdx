@@ -1,0 +1,35 @@
+---
+title: 恼鬼矿工 Vex Miner
+description: 怪物 · 第一章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/vex_miner.png";
+
+恼鬼矿工（Vex Miner）是第一章的常见怪物。
+
+<GameInfoBox
+  title="恼鬼矿工"
+  subtitle="Vex Miner"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "30" },
+    { label: "攻击力", value: "5" },
+    { label: "攻击冷却", value: "30 Ticks" },
+    { label: "对塔攻击范围", value: "10 格" },
+    { label: "移动速度", value: "中" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "5 ~ 7" },
+  ]}
+>
+
+## 行为
+
+由积怨化成的恶灵。它们能破坏塔，进而摧毁我方防御工事。
+
+- **飞行单位**：无视地形与路径，沿直线扑向我方；无法被士兵拦截，也无法被炮塔攻击。
+- **可以攻击塔**：会在 10 格内搜索我方塔，找到目标后原地停下持续拆塔；目标塔被摧毁或拆除后重新搜索。
+
+</GameInfoBox>

@@ -1,0 +1,36 @@
+---
+title: 蜘蛛 Spider
+description: 怪物 · 第二章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/spider.png";
+
+蜘蛛（Spider）是第二章的常见怪物。
+
+<GameInfoBox
+  title="蜘蛛"
+  subtitle="Spider"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "100" },
+    { label: "攻击力", value: "4" },
+    { label: "攻击冷却", value: "15 Ticks" },
+    { label: "移动速度", value: "中" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "低（25%）" },
+    { label: "火焰抗性", value: "惧怕火焰（-50%）" },
+    { label: "击杀掉落", value: "10 ~ 11" },
+  ]}
+>
+
+## 行为
+
+山洞中栖息的蜘蛛，有攀爬墙壁的能力。
+
+攻击间隔仅 15 Ticks，配合低血量、高攻速的特点，会快速消耗拦截它的士兵。
+
+惧怕火焰：受到物理-火焰与魔法-火焰伤害时会额外承受 50%。
+
+</GameInfoBox>

@@ -2,3 +2,60 @@
 title: 前线兵营 Frontline Barracks
 description: 二级兵营
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/barracks_tower_icon_2.png";
+import soldier_icon from "../../assets/wiki/soldiers/frontline_soldier.png";
+
+前线兵营（Frontline Barracks）是一座二级兵营，可由[兵营](./barracks1.mdx)升级而来，可升级为[铁骑兵营](./barracks3_iron_cavalry.mdx)或[不死墓碑](./barracks3_undying_tomb.mdx)。
+
+前线的兵营，用来驻扎前线哨兵。
+
+<GameInfoBox
+  title="前线兵营"
+  subtitle="Frontline Barracks"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "160" },
+    { label: "血量", value: "100" },
+    { label: "驻守士兵", value: "3 名" },
+    { label: "部署范围", value: "20 格" },
+  ]}
+>
+
+## 行为
+
+兵营自身不会攻击。建造后会立即在最近的路径点召唤 3 名**前线哨兵**，之后也可以通过部署法杖手动调整驻守位置。
+
+士兵会在驻守点附近 **3 格**范围内活动，拦截并攻击经过的地面敌人；士兵阵亡后，会在 **10 秒**后于驻守点复活。
+
+从兵营升级而来的前线兵营会继承原有的驻守点。
+
+兵营被摧毁或拆除时，其麾下士兵会一并消失。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="前线哨兵"
+  subtitle="Frontline Sentry"
+  type="ally"
+  image={soldier_icon.src}
+  attributes={[
+    { label: "血量", value: "75" },
+    { label: "攻击力", value: "6.5" },
+    { label: "攻击冷却", value: "14 Ticks" },
+    { label: "物理抗性", value: "20%" },
+    { label: "复活时间", value: "10 秒" },
+  ]}
+>
+
+## 盟友 前线哨兵 Frontline Sentry
+
+镇守前线的哨兵，剑法更加犀利。
+
+- 拦截并攻击地面单位。
+- 攻击时有小概率穿透目标的护甲。
+- 停止行动 4 秒后，每秒恢复 8 点血量。
+
+</GameInfoBox>

@@ -2,3 +2,56 @@
 title: 兵营 Barracks
 description: 一级兵营
 ---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/tower_icons/barracks_tower_icon_1.png";
+import soldier_icon from "../../assets/wiki/soldiers/normal_soldier.png";
+
+兵营（Barracks）是一座一级兵营，五大基础塔之一，可在空基座直接建造，可升级为[前线兵营](./barracks2.mdx)。
+
+常见的兵营，用来驻扎普通士兵。
+
+<GameInfoBox
+  title="兵营"
+  subtitle="Barracks"
+  type="tower"
+  image={icon.src}
+  attributes={[
+    { label: "建造花费", value: "100" },
+    { label: "血量", value: "80" },
+    { label: "驻守士兵", value: "3 名" },
+    { label: "部署范围", value: "20 格" },
+  ]}
+>
+
+## 行为
+
+兵营自身不会攻击。建造后会立即在最近的路径点召唤 3 名**普通士兵**，之后也可以通过部署法杖手动调整驻守位置。
+
+士兵会在驻守点附近 **3 格**范围内活动，拦截并攻击经过的地面敌人；士兵阵亡后，会在 **10 秒**后于驻守点复活。
+
+兵营被摧毁或拆除时，其麾下士兵会一并消失。
+
+</GameInfoBox>
+
+<GameInfoBox
+  title="普通士兵"
+  subtitle="Normal Soldier"
+  type="ally"
+  image={soldier_icon.src}
+  attributes={[
+    { label: "血量", value: "55" },
+    { label: "攻击力", value: "5" },
+    { label: "攻击冷却", value: "17 Ticks" },
+    { label: "复活时间", value: "10 秒" },
+  ]}
+>
+
+## 盟友 普通士兵 Normal Soldier
+
+普通的士兵，绝对服从于你的命令。
+
+- 拦截并攻击地面单位。
+- 停止行动 4 秒后，每秒恢复 8 点血量。
+
+</GameInfoBox>

@@ -1,0 +1,43 @@
+---
+title: 灵魂容器 Soul Vessel
+description: 怪物 · 第二章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/soul_vessel.png";
+
+灵魂容器（Soul Vessel）是第二章的特殊怪物。
+
+<GameInfoBox
+  title="灵魂容器"
+  subtitle="Soul Vessel"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "200" },
+    { label: "攻击力", value: "5" },
+    { label: "攻击冷却", value: "30 Ticks" },
+    { label: "移动速度", value: "中" },
+    { label: "物理抗性", value: "高（70%）" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "27 ~ 28" },
+  ]}
+>
+
+## 行为
+
+漂浮在战场上空的容器，会收集周围亡者的灵魂。
+
+- **飞行单位**：无法被士兵拦截，也无法被炮塔攻击。
+- **灵魂收割**：半径 **20 格**内的亡灵友军即将死亡时，伤害会被直接取消，该单位转而变为**灵魂形态**，继续陪同容器前进。
+- 灵魂容器死亡时，所有由它保住的灵魂形态单位会立刻一并死亡。
+
+</GameInfoBox>
+
+## 效果 灵魂形态 Soul Form
+
+- 生命值被固定为 **1**；
+- 完全免疫所有物理伤害；
+- 血条变为蓝色；
+
+由于物理输出对它完全无效，处理灵魂容器与其眷属时需要依赖魔法类伤害。

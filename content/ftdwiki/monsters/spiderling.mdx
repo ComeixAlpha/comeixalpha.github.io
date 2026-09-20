@@ -1,0 +1,34 @@
+---
+title: 小蜘蛛 Spiderling
+description: 怪物 · 第二章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/spiderling.png";
+
+小蜘蛛（Spiderling）是第二章的常见怪物。
+
+<GameInfoBox
+  title="小蜘蛛"
+  subtitle="Spiderling"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "45" },
+    { label: "攻击力", value: "3" },
+    { label: "攻击冷却", value: "15 Ticks" },
+    { label: "移动速度", value: "快" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "低（25%）" },
+    { label: "火焰抗性", value: "惧怕火焰（-50%）" },
+    { label: "击杀掉落", value: "4 ~ 5" },
+  ]}
+>
+
+## 行为
+
+山洞中栖息的幼年蜘蛛，有攀爬墙壁的能力。体型较小，移速较快。
+
+与[蜘蛛](./spider.mdx)一样惧怕火焰，受到火焰类伤害会额外承受 50%。
+
+</GameInfoBox>

@@ -6,7 +6,9 @@ description: 一级箭塔
 import { GameInfoBox } from "@/components/gameInfoBox";
 import icon from "../../assets/wiki/tower_icons/archer_tower_icon_1.png";
 
-箭塔（Archer）是一座一级箭塔，五大基础塔之一，可在空基座直接建造。
+箭塔（Archer）是一座一级箭塔，五大基础塔之一，可在空基座直接建造，可升级为[前哨箭塔](./archer2.mdx)。
+
+军用的训练箭塔，射速快，造价低廉，是最简单的远程攻击设备。
 
 <GameInfoBox
   title="箭塔"
@@ -18,11 +20,15 @@ import icon from "../../assets/wiki/tower_icons/archer_tower_icon_1.png";
     { label: "血量", value: "80" },
     { label: "攻击力", value: "6" },
     { label: "攻击冷却", value: "20 Ticks" },
+    { label: "攻击范围", value: "18 格" },
+    { label: "伤害类型", value: "物理-普通" },
   ]}
 >
 
 ## 行为
 
-发射箭矢攻击 1 个敌人
+建造后，塔顶会站上一名持弓的弓箭手。
+
+锁定射程内的 1 个敌人，向其射出一支箭矢并造成伤害；攻击时弓箭手会转身面向目标。
 
 </GameInfoBox>

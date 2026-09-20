@@ -1,0 +1,36 @@
+---
+title: 骷髅爆破手 Skeleton Dynamiter
+description: 怪物 · 第二章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/skeleton_dynamiter.png";
+
+骷髅爆破手（Skeleton Dynamiter）是第二章的常见怪物。
+
+<GameInfoBox
+  title="骷髅爆破手"
+  subtitle="Skeleton Dynamiter"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "60" },
+    { label: "攻击力", value: "4（近战）" },
+    { label: "攻击冷却", value: "60 Ticks" },
+    { label: "对塔射程", value: "20 格" },
+    { label: "移动速度", value: "中" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "10 ~ 11" },
+  ]}
+>
+
+## 行为
+
+手持 TNT 的骷髅，专门针对我方塔。
+
+**被塔攻击后**，若该塔距离自己 **20 格**以内且高度差不超过 3 格，骷髅爆破手就会停下脚步锁定这座塔，并以 **3 秒**的间隔向它投掷 TNT；每发 TNT 对塔造成 **20** 点伤害。
+
+锁定期间它不会继续前进，只有当目标塔被摧毁或拆除时，骷髅爆破手会重新开始移动。
+
+</GameInfoBox>

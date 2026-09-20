@@ -1,0 +1,38 @@
+---
+title: 尸壳丰收者 Husk Harvester
+description: 怪物 · 第一章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/husk_harvester.png";
+
+> 我们将为你献上一份礼物 —— 一份名为‘重生’的礼物。
+
+
+尸壳丰收者（Husk Harvester）是第一章的常见怪物。
+
+<GameInfoBox
+  title="尸壳丰收者"
+  subtitle="Husk Harvester"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "60" },
+    { label: "攻击力", value: "12" },
+    { label: "攻击冷却", value: "40 Ticks" },
+    { label: "移动速度", value: "慢" },
+    { label: "物理抗性", value: "低（10%）" },
+    { label: "魔法抗性", value: "中（40%）" },
+    { label: "击杀掉落", value: "10 ~ 12" },
+  ]}
+>
+
+## 行为
+
+令人望而生畏的丰收者。
+
+附近 **15 格**内有尸壳单位死亡时，它有 **20%** 概率立刻在尸体旁召唤一只[腐朽尸壳](./decayed_husk.mdx)。
+
+自身血量极低，但会持续地把阵亡的尸壳“复活”成自爆单位，通常应优先点杀。
+
+</GameInfoBox>

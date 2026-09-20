@@ -1,0 +1,38 @@
+---
+title: 骷髅骑士 Skeleton Knight
+description: 怪物 · 第二章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/skeleton_knight.png";
+
+骷髅骑士（Skeleton Knight）是第二章的精英怪物。
+
+<GameInfoBox
+  title="骷髅骑士"
+  subtitle="Skeleton Knight"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "400" },
+    { label: "攻击力", value: "10" },
+    { label: "攻击冷却", value: "30 Ticks" },
+    { label: "移动速度", value: "中" },
+    { label: "物理抗性", value: "高（50%）" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "36 ~ 37" },
+  ]}
+>
+
+## 行为
+
+全身钻石甲、手持闪电剑的骷髅骑士。
+
+每隔 **12 秒**，它会原地举起法杖，在 **15 格**内选择亡灵最密集的位置召唤一道落雷：
+
+- 对半径 **5 格**内的我方单位（士兵、英雄与其他骷髅）造成 **20** 点<span className="text-gray-500">（魔法-雷电）</span>伤害；
+- 对半径 **5 格**内的骷髅类亡灵，使其最大生命值与攻击力各提升 **20%**，并永久保留这一强化。
+
+与其他[骷髅马](./skeleton_horse.mdx)组队时，它会作为骑手生成。
+
+</GameInfoBox>

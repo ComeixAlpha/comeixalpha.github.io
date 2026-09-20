@@ -1,0 +1,36 @@
+---
+title: 重装骷髅战士 Heavy Skeleton Warrior
+description: 怪物 · 第二章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/heavy_skeleton_warrior.png";
+
+重装骷髅战士（Heavy Skeleton Warrior）是第二章的常见怪物。
+
+<GameInfoBox
+  title="重装骷髅战士"
+  subtitle="Heavy Skeleton Warrior"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "390" },
+    { label: "攻击力", value: "12" },
+    { label: "攻击冷却", value: "50 Ticks" },
+    { label: "移动速度", value: "中" },
+    { label: "物理抗性", value: "高（60%）" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "32 ~ 33" },
+  ]}
+>
+
+## 行为
+
+经过特殊训练的骷髅战士，战甲裹身，防御力得到进一步提升。
+
+- **能够使用盾牌**：受伤时有 **80%** 概率格挡攻击，完全抵消此次伤害，最多可格挡 **8** 次；盾牌破碎后不再格挡。
+- 格挡可生效的伤害类型有限：仅对弓箭手塔的物理伤害、魔法塔的任何伤害，以及近战来源生效。
+
+血量与物抗都极高，且盾牌能扛下绝大部分输出，通常需要配合无视抗性或高爆发的手段处理。
+
+</GameInfoBox>

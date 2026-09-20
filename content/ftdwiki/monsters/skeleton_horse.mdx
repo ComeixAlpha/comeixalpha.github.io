@@ -1,0 +1,35 @@
+---
+title: 骷髅马 Skeleton Horse
+description: 怪物 · 第二章
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../assets/wiki/monsters/skeleton_horse.png";
+
+骷髅马（Skeleton Horse）是第二章的骑兵坐骑。
+
+<GameInfoBox
+  title="骷髅马"
+  subtitle="Skeleton Horse"
+  type="monster"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "150" },
+    { label: "攻击力", value: "6" },
+    { label: "攻击冷却", value: "50 Ticks" },
+    { label: "移动速度", value: "快" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "击杀掉落", value: "24 ~ 25" },
+  ]}
+>
+
+## 行为
+
+背负着[骷髅骑士](./skeleton_knight.mdx)的坐骑。
+
+骷髅马阵亡时，骑手会从其身旁落地继续作战，并继承坐骑身上的全部增益与冻结等状态。
+
+到达我方水晶时，骑手则不会落地。
+
+</GameInfoBox>
