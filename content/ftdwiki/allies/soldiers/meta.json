@@ -1,0 +1,12 @@
+{
+  "title": "士兵",
+  "pages": [
+    "normal_soldier",
+    "frontline_soldier",
+    "knight",
+    "undying_soldier",
+    "skeleton_soldier",
+    "iron_skeleton_soldier",
+    "golden_skeleton_soldier"
+  ]
+}

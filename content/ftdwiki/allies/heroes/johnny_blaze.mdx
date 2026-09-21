@@ -1,0 +1,73 @@
+---
+title: 烈焰骑士 Johnny Blaze
+description: 友军 · 英雄
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../../assets/wiki/allies/johnny_blaze.png";
+import skill_icon from "../../../assets/wiki/allies/blaze_sword.png";
+
+烈焰骑士（Johnny Blaze）是一位近战英雄。
+
+<GameInfoBox
+  title="烈焰骑士"
+  subtitle="Johnny Blaze"
+  type="hero"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "150（可成长）" },
+    { label: "攻击力", value: "10（可成长）" },
+    { label: "攻击冷却", value: "30 Ticks" },
+    { label: "移动速度", value: "中" },
+    { label: "物理抗性", value: "低（25%）" },
+    { label: "魔法抗性", value: "无" },
+  ]}
+>
+
+## 行为
+
+手持地狱之剑的战士，能够释放炽热的火焰攻击敌人。原驻扎在埃瑞蒙北方哨站，镇守亡幽灵峡谷，被命令中途加入水晶护送军行列。
+
+三位英雄中血量与物理抗性最高，但移动速度最慢、攻击频率最低，属于前排承伤兼爆发的定位。
+
+</GameInfoBox>
+
+## 升级
+
+|英雄等级|成长|
+|---|---|
+|2 / 5 / 8 级|最大生命值 +20 / +25 / +35，并立即回满|
+|3 / 6 / 9 级|攻击力 +1 / +1 / +2|
+|4 / 7 / 10 级|**烈火刀刀爆**技能等级 +1|
+
+英雄阵亡后会在原地复活。
+
+<GameInfoBox
+  title="烈火刀刀爆"
+  subtitle="Blaze Sword"
+  type="ally"
+  image={skill_icon.src}
+  attributes={[
+    { label: "冷却时间", value: "30 秒" },
+    { label: "可用等级", value: "0 / 1 / 2 / 3" },
+    { label: "爆炸半径", value: "3 格" },
+  ]}
+>
+
+## 主动技能 烈火刀刀爆 Blaze Sword
+
+使用时，烈焰骑士原地挥舞地狱之剑，沿地面向前**追击最近的敌人**，沿途不断炸裂出火焰，对半径 **3 格**内的所有敌人造成<span className="text-gray-500">（魔法-火焰）</span>伤害。
+
+每段爆炸都视为一次独立结算：
+
+|技能等级|爆炸次数|单次伤害|爆炸间隔|
+|---|---|---|---|
+|一级|**12** 次|**30**|8 Ticks|
+|二级|**15** 次|**40**|6 Ticks|
+|三级|**20** 次|**50**|4 Ticks|
+
+火焰推进会追踪附近最近的敌人；若附近没有敌人，技能会提前结束。释放期间英雄无法移动、攻击与索敌。
+
+**释放后的 10 秒内**，烈焰骑士获得**烈焰附魔**：每次普通攻击在原有伤害之外，额外造成该次伤害 **10%** 的<span className="text-gray-500">（魔法-火焰）</span>伤害。
+
+</GameInfoBox>

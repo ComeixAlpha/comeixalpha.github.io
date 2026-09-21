@@ -1,0 +1,41 @@
+---
+title: 普通士兵 Normal Soldier
+description: 友军 · 士兵
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../../assets/wiki/allies/normal_soldier.png";
+
+普通士兵（Normal Soldier）是[兵营](../../towers/barracks1.mdx)驻守的士兵。
+
+<GameInfoBox
+  title="普通士兵"
+  subtitle="Normal Soldier"
+  type="ally"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "55" },
+    { label: "攻击力", value: "5" },
+    { label: "攻击冷却", value: "17 Ticks" },
+    { label: "攻击范围", value: "1.8 格" },
+    { label: "索敌范围", value: "7 格" },
+    { label: "移动速度", value: "快" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "交战槽位", value: "1" },
+  ]}
+>
+
+## 行为
+
+普通的士兵，绝对服从于你的命令。
+
+由兵营部署，会在驻守点附近活动，拦截并攻击经过的地面亡灵；攻击距离约 1.8 格，索敌范围 7 格。
+
+手持木剑，没有护甲，是最基础的防线。
+
+- 拦截并攻击地面单位。
+- 停止行动 4 秒后，每秒恢复 8 点血量。
+- 阵亡后会在其驻守点复活，具体时间由驻守的兵营决定。
+
+</GameInfoBox>

@@ -1,0 +1,41 @@
+---
+title: 铁傀儡 Iron Golem
+description: 友军 · 士兵
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../../assets/wiki/allies/iron_golem.png";
+
+铁傀儡（Iron Golem）是体型最大的友军士兵。
+
+<GameInfoBox
+  title="铁傀儡"
+  subtitle="Iron Golem"
+  type="ally"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "300" },
+    { label: "攻击力", value: "30" },
+    { label: "攻击冷却", value: "25 Ticks" },
+    { label: "攻击范围", value: "3 格" },
+    { label: "索敌范围", value: "10 格" },
+    { label: "移动速度", value: "中" },
+    { label: "物理抗性", value: "高（70%）" },
+    { label: "魔法抗性", value: "中（30%）" },
+    { label: "交战槽位", value: "3" },
+  ]}
+>
+
+## 行为
+
+身披铁甲、手持铁剑与盾牌的巨型傀儡。
+
+它是目前属性最高的友军：血量 300、攻击力 30，双抗都很出色；**交战槽位高达 3**，意味着它一个人就能同时拦住 3 个亡灵，是极强的堵口单位。
+
+攻击距离 3 格，比普通士兵略长。
+
+- 拦截并攻击地面单位，可同时拦截 3 个目标。
+- 攻击时有 **12%** 概率穿透目标护甲，使目标的物理抗性**减半**；若目标有可用盾牌则不会生效。
+- 停止行动 4 秒后，每秒恢复 8 点血量。
+
+</GameInfoBox>

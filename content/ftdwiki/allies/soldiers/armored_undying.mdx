@@ -1,0 +1,38 @@
+---
+title: 武装亡兵 Armored Undying
+description: 友军 · 士兵
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../../assets/wiki/allies/armored_undying.png";
+
+武装亡兵（Armored Undying）是[亡兵](./undying_soldier.mdx)的强化形态。
+
+<GameInfoBox
+  title="武装亡兵"
+  subtitle="Armored Undying"
+  type="ally"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "50" },
+    { label: "攻击力", value: "7" },
+    { label: "攻击冷却", value: "14 Ticks" },
+    { label: "攻击范围", value: "1.8 格" },
+    { label: "索敌范围", value: "7 格" },
+    { label: "移动速度", value: "极快" },
+    { label: "物理抗性", value: "中（30%）" },
+    { label: "魔法抗性", value: "无" },
+    { label: "交战槽位", value: "1" },
+  ]}
+>
+
+## 行为
+
+披上加固锁链甲的亡兵，头戴加固锁链头盔、手持铁剑。
+
+相比[亡兵](./undying_soldier.mdx)，血量、攻击力、攻击频率与移动速度全面提升，并获得了 30% 的物理抗性。
+
+- 拦截并攻击地面单位。
+- 停止行动 4 秒后，每秒恢复 8 点血量。
+
+</GameInfoBox>

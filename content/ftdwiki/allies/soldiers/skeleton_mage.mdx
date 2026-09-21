@@ -1,0 +1,39 @@
+---
+title: 骷髅法师 Skeleton Mage
+description: 友军 · 士兵
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../../assets/wiki/allies/skeleton_mage.png";
+
+骷髅法师（Skeleton Mage）是一名远程骷髅单位。
+
+<GameInfoBox
+  title="骷髅法师"
+  subtitle="Skeleton Mage"
+  type="ally"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "40" },
+    { label: "攻击力", value: "15" },
+    { label: "攻击冷却", value: "20 Ticks" },
+    { label: "攻击范围", value: "10 格" },
+    { label: "索敌范围", value: "10 格" },
+    { label: "移动速度", value: "快" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "交战槽位", value: "1" },
+  ]}
+>
+
+## 行为
+
+手持暗法杖的骷髅施法者，会向 10 格内的敌人发射追踪法术。
+
+攻击力很高但血量极低，属于典型的脆皮输出单位；攻击时会沿贝塞尔曲线拖出法术尾迹。
+
+- 拦截并攻击地面单位，可在 10 格外远程输出。
+- 攻击时有 **12%** 概率穿透目标护甲，使目标的物理抗性**减半**；若目标有可用盾牌则不会生效。
+- 停止行动 4 秒后，每秒恢复 8 点血量。
+
+</GameInfoBox>

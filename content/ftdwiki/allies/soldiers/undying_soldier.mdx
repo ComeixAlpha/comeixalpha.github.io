@@ -1,0 +1,40 @@
+---
+title: 亡兵 Undying Soldier
+description: 友军 · 士兵
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../../assets/wiki/allies/undying_soldier.png";
+
+亡兵（Undying Soldier）是[不死墓碑](../../towers/barracks3_undying_tomb.mdx)驻守的士兵。
+
+<GameInfoBox
+  title="亡兵"
+  subtitle="Undying Soldier"
+  type="ally"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "35" },
+    { label: "攻击力", value: "5" },
+    { label: "攻击冷却", value: "12 Ticks" },
+    { label: "攻击范围", value: "1.8 格" },
+    { label: "索敌范围", value: "7 格" },
+    { label: "移动速度", value: "快" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "交战槽位", value: "1" },
+  ]}
+>
+
+## 行为
+
+起死回生的士兵，重生的身躯只剩下一具骨骸。
+
+单体属性很低，但攻击频率高、**复活极快**。
+
+- 拦截并攻击地面单位。
+- 攻击时有 **12%** 概率穿透目标护甲，使目标的物理抗性**减半**；若目标有可用盾牌则不会生效。
+- 停止行动 4 秒后，每秒恢复 8 点血量。
+- 阵亡后会在其驻守点复活，具体时间由驻守的兵营决定，是所有兵营士兵中最快的。
+
+</GameInfoBox>

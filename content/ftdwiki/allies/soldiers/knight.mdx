@@ -1,0 +1,41 @@
+---
+title: 骑士 Knight
+description: 友军 · 士兵
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../../assets/wiki/allies/knight.png";
+
+骑士（Knight）是[铁骑兵营](../../towers/barracks3_iron_cavalry.mdx)驻守的士兵。
+
+<GameInfoBox
+  title="骑士"
+  subtitle="Knight"
+  type="ally"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "80" },
+    { label: "攻击力", value: "8" },
+    { label: "攻击冷却", value: "24 Ticks" },
+    { label: "攻击范围", value: "1.8 格" },
+    { label: "索敌范围", value: "7 格" },
+    { label: "移动速度", value: "快" },
+    { label: "物理抗性", value: "中（40%）" },
+    { label: "魔法抗性", value: "低（10%）" },
+    { label: "交战槽位", value: "1" },
+  ]}
+>
+
+## 行为
+
+王国的百战精锐，拥有强大的防御力。
+
+身穿铁制与锁链护甲并配有盾牌。
+
+- 拦截并攻击地面单位。
+- 受伤时有 **80%** 概率格挡攻击，完全抵消此次伤害，与[重装骷髅战士](../../monsters/heavy_skeleton_warrior.mdx)的格挡不同，骑士的格挡次数是无限的；且骑士的格挡可以格挡任意伤害。
+- 停止行动 4 秒后，每秒恢复 8 点血量。
+- 攻击时有 **12%** 概率穿透目标护甲，使目标的物理抗性**减半**；若目标有可用盾牌则不会生效。
+- 阵亡后会在其驻守点复活，具体时间由驻守的兵营决定。
+
+</GameInfoBox>

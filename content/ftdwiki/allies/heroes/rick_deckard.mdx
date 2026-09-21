@@ -1,0 +1,76 @@
+---
+title: 银刃杀手 Rick Deckard
+description: 友军 · 英雄
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../../assets/wiki/allies/rick_deckard.png";
+import skill_icon from "../../../assets/wiki/allies/whirlwind_slash.png";
+
+银刃杀手（Rick Deckard）是一位近战英雄。
+
+<GameInfoBox
+  title="银刃杀手"
+  subtitle="Rick Deckard"
+  type="hero"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "100（可成长）" },
+    { label: "攻击力", value: "9（可成长）" },
+    { label: "攻击冷却", value: "20 Ticks" },
+    { label: "移动速度", value: "快" },
+    { label: "物理抗性", value: "低（15%）" },
+    { label: "魔法抗性", value: "无" },
+  ]}
+>
+
+## 行为
+
+手执银刃的剑士，善于使用强力斩击击杀敌人，骁勇善战，破例提拔于玛吉娅娜王室直属骑士团。
+
+近战单位，会主动冲向目标；追击同一个目标超过 10 秒仍未接触时，会放弃追击。
+
+## 特性 背水一战
+
+生命值跌破**最大值的 36%** 时，攻击力立即提升 **20%**；回血重新越过该线后，加成随之撤销。
+
+</GameInfoBox>
+
+## 升级
+
+|英雄等级|成长|
+|---|---|
+|2 / 5 / 8 级|最大生命值 +10 / +15 / +25，并立即回满|
+|3 / 6 / 9 级|攻击力 +2 / +4 / +6|
+|4 / 7 / 10 级|**旋风斩**技能等级 +1|
+
+英雄阵亡后会在原地复活。
+
+<GameInfoBox
+  title="旋风斩"
+  subtitle="Whirlwind Slash"
+  type="ally"
+  image={skill_icon.src}
+  attributes={[
+    { label: "冷却时间", value: "22 秒" },
+    { label: "可用等级", value: "0 / 1 / 2 / 3" },
+    { label: "作用范围", value: "5 格" },
+    { label: "伤害段数", value: "3 段" },
+  ]}
+>
+
+## 主动技能 旋风斩 Whirlwind Slash
+
+使用时，银刃杀手原地抡起大剑，以 **10 Ticks** 的间隔连续三次，对自身半径 **5 格**内的所有敌人造成<span className="text-gray-500">（物理-普通）</span>伤害。
+
+|技能等级|每段伤害|
+|---|---|
+|一级|**35**|
+|二级|**65**|
+|三级|**100**|
+
+释放期间无法移动、攻击与索敌，三段全部结束后才恢复行动。
+
+该技能伤害同样能吃到「背水一战」的加成。
+
+</GameInfoBox>

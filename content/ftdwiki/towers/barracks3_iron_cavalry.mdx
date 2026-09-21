@@ -5,11 +5,10 @@ description: 三级兵营
 
 import { GameInfoBox } from "@/components/gameInfoBox";
 import icon from "../../assets/wiki/tower_icons/barracks_tower_icon_3_1.png";
-import soldier_icon from "../../assets/wiki/soldiers/knight.png";
 
 铁骑兵营（Iron Cavalry）是一座三级兵营，可由[前线兵营](./barracks2.mdx)升级而来。
 
-王国的御用兵营，用来驻扎骑士。
+王国的御用兵营，用来驻扎[骑士](../allies/soldiers/knight.mdx)。
 
 <GameInfoBox
   title="铁骑兵营"
@@ -20,44 +19,19 @@ import soldier_icon from "../../assets/wiki/soldiers/knight.png";
     { label: "建造花费", value: "200" },
     { label: "血量", value: "120" },
     { label: "驻守士兵", value: "3 名" },
+    { label: "复活时间", value: "10 秒" },
     { label: "部署范围", value: "20 格" },
   ]}
 >
 
 ## 行为
 
-兵营自身不会攻击。建造后会立即在最近的路径点召唤 3 名**骑士**，之后也可以手动调整驻守位置。
+兵营自身不会攻击。建造后会立即在最近的路径点召唤 3 名[骑士](../allies/soldiers/knight.mdx)，之后也可以手动调整驻守位置。
 
-士兵会在驻守点附近 **3 格**范围内活动，拦截并攻击经过的地面敌人；士兵阵亡后，会在 **10 秒**后于驻守点复活。
+士兵会在驻守点附近 **3 格**范围内活动，拦截并攻击经过的地面敌人。
 
 升级时原有的驻守点会被继承。
 
 兵营被摧毁或拆除时，其麾下士兵会一并消失。
-
-</GameInfoBox>
-
-<GameInfoBox
-  title="骑士"
-  subtitle="Knight"
-  type="ally"
-  image={soldier_icon.src}
-  attributes={[
-    { label: "血量", value: "80" },
-    { label: "攻击力", value: "8" },
-    { label: "攻击冷却", value: "24 Ticks" },
-    { label: "物理抗性", value: "40%" },
-    { label: "魔法抗性", value: "10%" },
-    { label: "复活时间", value: "10 秒" },
-  ]}
->
-
-## 盟友 骑士 Knight
-
-王国的百战精锐，拥有强大的防御力。
-
-- 拦截并攻击地面单位。
-- 受伤时有 20% 概率格挡攻击，完全抵消此次伤害。
-- 每名骑士的盾牌最多可以格挡 9999 次，盾牌破碎后不再格挡。
-- 停止行动 4 秒后，每秒恢复 8 点血量。
 
 </GameInfoBox>

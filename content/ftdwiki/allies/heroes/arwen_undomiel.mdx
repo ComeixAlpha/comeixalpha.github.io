@@ -1,0 +1,75 @@
+---
+title: 苍绿猎手 Arwen Undomiel
+description: 友军 · 英雄
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../../assets/wiki/allies/arwen_undomiel.png";
+import skill_icon from "../../../assets/wiki/allies/arrow_of_wind.png";
+
+苍绿猎手（Arwen Undomiel）是一位远程英雄。
+
+<GameInfoBox
+  title="苍绿猎手"
+  subtitle="Arwen Undomiel"
+  type="hero"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "40（可成长）" },
+    { label: "攻击力", value: "2（可成长）" },
+    { label: "攻击冷却", value: "12 Ticks" },
+    { label: "攻击范围", value: "12 格" },
+    { label: "索敌范围", value: "12 格" },
+    { label: "移动速度", value: "快" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+  ]}
+>
+
+## 行为
+
+一位擅长使用弓箭的半精灵猎手，能够精准地打击远距离的敌人。
+
+在 12 格外用长弓远程点射，攻击频率很高（每 12 Ticks 一次）；血量很低，需要其他单位掩护。
+
+</GameInfoBox>
+
+## 升级
+
+英雄每次攻击都会积累经验，达到阈值后提升英雄等级（上限 10 级）。苍绿猎手的成长节奏是：
+
+|英雄等级|成长|
+|---|---|
+|2 / 5 / 8 级|最大生命值 +10 / +15 / +25，并立即回满|
+|3 / 6 / 9 级|攻击力 +1 / +1 / +2|
+|4 / 7 / 10 级|**风之矢**技能等级 +1|
+
+英雄阵亡后会在原地复活。
+
+<GameInfoBox
+  title="风之矢"
+  subtitle="Arrow of Wind"
+  type="ally"
+  image={skill_icon.src}
+  attributes={[
+    { label: "冷却时间", value: "20 秒" },
+    { label: "可用等级", value: "0 / 1 / 2 / 3" },
+    { label: "索敌范围", value: "20 格" },
+  ]}
+>
+
+## 主动技能 风之矢 Arrow of Wind
+
+使用时，锁定 20 格内**生命值最高**的敌人，射出一支风之箭，对其造成**其最大生命值**一定百分比的<span className="text-gray-500">（物理-普通）</span>伤害：
+
+|技能等级|伤害比例|
+|---|---|
+|一级|目标最大生命值的 **40%**|
+|二级|目标最大生命值的 **55%**|
+|三级|目标最大生命值的 **80%**|
+
+若目标是 BOSS，则改为固定造成 **150** 点伤害。
+
+风之箭抵达后，还会在目标周围半径 **5 格**内降下 **20** 支箭雨，每支造成 **4** 点<span className="text-gray-500">（物理-普通）</span>伤害。
+
+</GameInfoBox>

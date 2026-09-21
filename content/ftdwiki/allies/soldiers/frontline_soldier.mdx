@@ -1,0 +1,40 @@
+---
+title: 前线哨兵 Frontline Sentry
+description: 友军 · 士兵
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../../assets/wiki/allies/frontline_soldier.png";
+
+前线哨兵（Frontline Sentry）是[前线兵营](../../towers/barracks2.mdx)驻守的士兵。
+
+<GameInfoBox
+  title="前线哨兵"
+  subtitle="Frontline Sentry"
+  type="ally"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "75" },
+    { label: "攻击力", value: "6.5" },
+    { label: "攻击冷却", value: "14 Ticks" },
+    { label: "攻击范围", value: "1.8 格" },
+    { label: "索敌范围", value: "7 格" },
+    { label: "移动速度", value: "快" },
+    { label: "物理抗性", value: "低（20%）" },
+    { label: "魔法抗性", value: "无" },
+    { label: "交战槽位", value: "1" },
+  ]}
+>
+
+## 行为
+
+镇守前线的哨兵，剑法更加犀利。
+
+相比[普通士兵](./normal_soldier.mdx)，血量、攻击力与攻击频率都有提升，并额外获得了 20% 的物理抗性；全套皮革护甲。
+
+- 拦截并攻击地面单位。
+- 攻击时有 **12%** 概率穿透目标护甲，使目标的物理抗性**减半**；若目标有可用盾牌则不会生效。
+- 停止行动 4 秒后，每秒恢复 8 点血量。
+- 阵亡后会在其驻守点复活，具体时间由驻守的兵营决定。
+
+</GameInfoBox>

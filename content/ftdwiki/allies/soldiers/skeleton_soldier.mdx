@@ -1,0 +1,39 @@
+---
+title: 骷髅士兵 Skeleton Soldier
+description: 友军 · 士兵（召唤物）
+---
+
+import { GameInfoBox } from "@/components/gameInfoBox";
+import icon from "../../../assets/wiki/allies/skeleton_soldier.png";
+
+骷髅士兵（Skeleton Soldier）是[死灵](../../magic/skeleton.mdx)魔法召唤的骷髅单位，一级死灵召唤的即是这一种。
+
+<GameInfoBox
+  title="骷髅士兵"
+  subtitle="Skeleton Soldier"
+  type="ally"
+  image={icon.src}
+  attributes={[
+    { label: "血量", value: "48" },
+    { label: "攻击力", value: "3" },
+    { label: "攻击冷却", value: "17 Ticks" },
+    { label: "攻击范围", value: "1.8 格" },
+    { label: "索敌范围", value: "7 格" },
+    { label: "移动速度", value: "快" },
+    { label: "物理抗性", value: "无" },
+    { label: "魔法抗性", value: "无" },
+    { label: "交战槽位", value: "1" },
+  ]}
+>
+
+## 行为
+
+死灵禁术的召唤物，手持骨棒。
+
+由[死灵魔法](../../magic/skeleton.mdx)在指定落点召唤，一次 2 只，并就地在半径 2 格内散开。
+
+- 拦截并攻击地面单位。
+- **持续损失生命**：每秒流失 **2** 点生命，无法被治疗，因此存在时间完全取决于血量上限（约 24 秒）。
+- 若用它击杀[腐朽尸壳](../../monsters/decayed_husk.mdx)后又被其亡语爆炸炸死，可以解锁成就「死亡与荣光」。
+
+</GameInfoBox>
